@@ -174,7 +174,7 @@ body {
                 <li role="presentation"><a href="#juazeiro" aria-controls="juazeiro" role="tab" data-toggle="tab">Juazeiro do Norte</a></li>
                 <li role="presentation"><a href="#quixada" aria-controls="quixada" role="tab" data-toggle="tab">Quixadá</a></li>
                 <li role="presentation"><a href="#russas" aria-controls="russas" role="tab" data-toggle="tab">Russas</a></li>
-                <li role="presentation"><a data-toggle="tab" data-target="#goncalo" role="tab" aria-controls="goncalo">São Gonçalo do Amarante</a></li>
+                <li role="presentation"><a data-toggle="tab" href="#goncalo" role="tab" aria-controls="goncalo">São Gonçalo do Amarante</a></li>
             </ul>
             <!-- Tab panes -->
             <div class="tab-content">
@@ -413,45 +413,67 @@ body {
 </section>
 <!--******************** Contact Section ********************-->
 <section id="contact" class="single-page scrollblock">
-  <div class="container">
-    <div class="align"><i class="icon-mail-2"></i></div>
-    <h1>Inscreva-se</h1>
-    <div class="row">
-      <div class="span12">
-        <div class="cform" id="theme-form">
-          <form action="#" method="post" class="cform-form">
-            <div class="row">
-              <div class="span6"> <span class="your-name">
-                <input type="text" name="your-name" placeholder="Your Name" class="cform-text" size="40" title="your name">
-                </span> </div>
-              <div class="span6"> <span class="your-email">
-                <input type="text" name="your-email" placeholder="Your Email" class="cform-text" size="40" title="your email">
-                </span> </div>
+    <div class="container">
+        <div class="align"><i class="icon-mail-2"></i></div>
+        <h1>Inscreva-se</h1>
+        <div class="row">
+            <div class="span12">
+                <div class="cform" id="theme-form">
+                    <form id="cadastro" action="inscrever-banco.php" method="post" class="cform-form">
+                        <div class="form-group">
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="categoria_id" value="1">
+                                  Estudante
+                              </label>
+                          </div>
+                          <div class="radio">
+                              <label>
+                                  <input type="radio" name="categoria_id" value="2">
+                                  Palestrante
+                              </label>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="nome">Nome</label>
+                          <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira seu nome">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="email" class="form-control" id="email" name="email" placeholder="Insira seu e-mail">
+                        </div>
+                        <div class="form-group">
+                          <label for="endereco">Endereço</label>
+                          <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Insira seu endereço">
+                        </div>
+                        <div class="form-group">
+                          <label for="telefone">Telefone</label>
+                          <input type="tel" class="form-control" id="telefone" name="telefone" size="20" placeholder="Insira seu telefone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cidade">Escolha sua Cidade</label>
+                            <select class="form-control" name="cidade" id="cidade">
+                                <option>Acarau</option>
+                                <option>Caninde</option>
+                                <option>Crateus</option>
+                                <option>Fortaleza</option>
+                                <option>Juazeiro do Norte</option>
+                                <option>Quixada</option>
+                                <option>Russas</option>
+                                <option>São Gonçalo do Amarante</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="submit" id="enviar" value="enviar" class="cform-submit pull-left">
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="row">
-              <div class="span6"> <span class="company">
-                <input type="text" name="company" placeholder="Your Company" class="cform-text" size="40" title="company">
-                </span> </div>
-              <div class="span6"> <span class="website">
-                <input type="text" name="website" placeholder="Your Website" class="cform-text" size="40" title="website">
-                </span> </div>
-            </div>
-            <div class="row">
-              <div class="span12"> <span class="message">
-                <textarea name="message" class="cform-textarea" cols="40" rows="10" title="drop us a line."></textarea>
-                </span> </div>
-            </div>
-            <div>
-              <input type="submit" value="Enviar" class="cform-submit pull-left">
-            </div>
-            <div class="cform-response-output"></div>
-          </form>
+                <!-- ./span12 -->
         </div>
-      </div>
-      <!-- ./span12 -->
+            <!-- /.row -->
     </div>
-    <!-- /.row -->
-  </div>
   <!-- /.container -->
 </section>
 <hr>
