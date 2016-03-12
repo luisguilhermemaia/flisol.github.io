@@ -1,3 +1,7 @@
+<?php ob_start(); ?>
+<?php include ("inscrever-banco.php"); ?>
+
+
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -419,11 +423,11 @@ body {
         <div class="row">
             <div class="span12">
                 <div class="cform" id="theme-form">
-                    <form id="cadastro" action="inscrever-banco.php" method="post" class="cform-form">
-                        <div class="form-group">
+                    <form action="inscrever-banco.php" method="post" target="_blank" class="cform-form">
+                        <div class="cform-form">
                           <div class="radio">
                               <label>
-                                  <input type="radio" name="categoria_id" value="1">
+                                  <input type="radio" name="categoria_id" value="1" checked>
                                   Estudante
                               </label>
                           </div>
@@ -434,26 +438,26 @@ body {
                               </label>
                           </div>
                         </div>
-                        <div class="form-group">
+                        <div class="cform-form">
                           <label for="nome">Nome</label>
                           <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira seu nome">
                         </div>
-                        <div class="form-group">
+                        <div class="cform-form">
                           <label for="email">Email</label>
                           <input type="email" class="form-control" id="email" name="email" placeholder="Insira seu e-mail">
                         </div>
-                        <div class="form-group">
+                        <div class="cform-form">
                           <label for="endereco">Endereço</label>
                           <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Insira seu endereço">
                         </div>
-                        <div class="form-group">
+                        <div class="cform-form">
                           <label for="telefone">Telefone</label>
-                          <input type="tel" class="form-control" id="telefone" name="telefone" size="20" placeholder="Insira seu telefone">
+                          <input type="text" class="form-control" id="telefone" name="telefone" size="20" placeholder="Insira seu telefone">
                         </div>
 
-                        <div class="form-group">
+                        <div class="cform-form">
                             <label for="cidade">Escolha sua Cidade</label>
-                            <select class="form-control" name="cidade" id="cidade">
+                            <select class="cform-form" name="cidade" id="cidade">
                                 <option>Acarau</option>
                                 <option>Caninde</option>
                                 <option>Crateus</option>

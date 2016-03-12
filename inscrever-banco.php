@@ -1,19 +1,39 @@
+
 <?php
-$conexao = mysqli_connect("localhost","root", "root", "inscricao");
+//$conexao = mysqli_connect("localhost","root", "root", "inscricao");
+$categoria_id = strtolower($_POST['categoria_id']);
+$nome = strtolower($_POST['nome']);
+$email = strtolower($_POST['email']);
+$endereco = strtolower($_POST['endereco']);
+$telefone = strtolower($_POST['telefone']);
+$cidade = strtolower($_POST['cidade']);
 
-$categoria_id = $_POST['categoria_id'];
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$endereco = $_POST['endereco'];
-$telefone = $_POST['telefone'];
-$cidade = $_POST['cidade'];
 
+$username = "root";
+$password = "root";
+$params = array(
+                ':categoria_id' => $categoria_id,
+                ':nome' => $nome,
+                ':email' => $email,
+                ':endereco' => $endereco,
+                ':telefone'=> $telefone,
+                ':cidade' => $cidade
+            );
+try {
+    $pdo = new PDO('mysql:host=localhost;dbname=inscricao', $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-function inserirInscrito($conexao, $categoria_id, $nome, $email, $endereco, $telefone, $cidade){
-    $query = "insert into inscritos (categoria_id, nome, email, endereco, telefone, cidade) values ('{$categoria_id}', {$nome}, '{$email}','{$endereco}','{$telefone}','{$cidade}')";
-    return mysqli_query($conexao, $query);
+    $stmt = $pdo->prepare('INSERT INTO inscritos (categoria_id, nome, email, endereco, telefone, cidade) VALUES(:categoria_id, :nome, :email, :endereco, :telefone, :cidade)');
+    $stmt->execute($params);
+    print "Cadastro realizado com sucesso!";
+} catch(PDOException $e) {
+    echo 'Error: ' . $e->getMessage();
 }
 
+//header("Location: index.php?inscrito=true");
+//die();
 
-inserirInscrito($conexao, $categoria_id, $nome, $email, $endereco, $telefone, $cidade);
+
+
+
 
