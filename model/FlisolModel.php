@@ -2,12 +2,21 @@
 
 class FlisolModel{
 
+	private $db;
 	private $categoria_id;
 	private $nome;
 	private $email;
 	private $telefone;
 	private $cidade;
 	private $endereco;
+	private $instituicao;
+	private $semestre;
+
+	public function __construct(){
+		$pdo = new PDO('mysql:host=localhost;dbname=flisol2016', "root", "");
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$this->db = $pdo ;
+	}
 
 	public function getCategoriaId(){
         return $this->categoria_id;
@@ -63,69 +72,113 @@ class FlisolModel{
         return $this;
     }
 
-    public function addInscrito(){
+    public function getInstituicao(){
+        return $this->instituicao;
+    }
 
-		$email = $this->verificarEmail();
+    public function setInstituicao($instituicao){
+        $this->instituicao = $instituicao;
+        return $this;
+    }
 
-		if(!$email){
+    public function getSemestre(){
+        return $this->semestre;
+    }
 
-			try {
+    public function setSemestre($semestre){
+        $this->semestre = $semestre;
+        return $this;
+    }
+
+    public function getLink(){
+        return $this->link;
+    }
+
+    public function setLink($link){
+        $this->link = $link;
+        return $this;
+    }
+
+    public function getResumo(){
+        return $this->resumo;
+    }
+
+    public function setResumo($resumo){
+        $this->resumo = $resumo;
+        return $this;
+    }
+
+// Metodos
+
+    public function adicionarInscrito(){
+
+    	if (!$this->existeInscritoEmail()){
+    		try {
 				$params = array(
+					':cidade' => $this->getCidade(),
 	                ':categoria_id' => $this->getCategoriaId(),
 	                ':nome' => $this->getNome(),
 	                ':email' => $this->getEmail(),
 	                ':endereco' => $this->getEndereco(),
 	                ':telefone'=> $this->getTelefone(),
-	                ':cidade' => $this->getCidade()
+	                ':instituicao'=> $this->getInstituicao(),
+	                ':semestre' => $this->getSemestre(),
+	                ':link'=> $this->getLink(),
+	                ':resumo' => $this->getResumo()
 	            );
 
-				$pdo = new PDO('mysql:host=localhost;dbname=flisol', "root", "root");
+				$query = 'INSERT INTO inscritos (categoria_id, nome, email, endereco, telefone, cidade, instituicao, semestre, link, resumo) VALUES(:categoria_id, :nome, :email, :endereco, :telefone, :cidade, :instituicao, :semestre, :link, :resumo)';
+				$this->db->prepare($query)->execute($params);
 
-				$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			    $stmt = $pdo->prepare('INSERT INTO inscritos (categoria_id, nome, email, endereco, telefone, cidade) VALUES(:categoria_id, :nome, :email, :endereco, :telefone, :cidade)');
-			    $stmt->execute($params);
+    			return '<p style="color:#333" > Inscrição realizada com sucesso! <br/> <br/> Palestrantes - aguardem, pois em breve divulgaremos no facebook/site os palestrantes confirmados.</p>';
 
-			    return 'true'; 
 		    } catch(PDOException $e) {
-		    	echo 'Error: ' . $e->getMessage();
+	    	return '<p style="color:red" >Erro ao realizar inscrição. Desculpe, tente novamente mais tarde.</p>';
 			}
-		}else{		
-			$this->atualizarInscrito();
-		}
+    	}else{
+    		return $this->atualizarInscrito();
+    	}
+		
+		
 	}	
 
-	public function verificarEmail(){
+	public function existeInscritoEmail(){
+		$query = "SELECT count(*) as total FROM inscritos WHERE email like :email";
+		$params = array(':email' => $this->getEmail());
 
-		$pdo = new PDO('mysql:host=localhost;dbname=flisol', "root", "root");
+		$sth = $this->db->prepare($query);
+		$sth->execute($params);
+		$resultObj = $sth->fetch(PDO::FETCH_OBJ);
 
-		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-		$query = "SELECT email FROM inscritos WHERE email='".$this->getEmail()."'";
-	    $stmt = $pdo->prepare($query);
-	    $stmt->execute();
-		$value = $stmt->fetch(PDO::FETCH_ASSOC);
-
-		if($value){
-			return true;
-		}
-
-	    return false;
+		return ($resultObj->total > 0);
 	}
 
 	public function atualizarInscrito(){
 
-		$pdo = new PDO('mysql:host=localhost;dbname=flisol', "root", "root");
+		try {
+				
+				$params = array(
+	                ':cidade' => $this->getCidade(),
+	                ':categoria_id' => $this->getCategoriaId(),
+	                ':nome' => $this->getNome(),
+	                ':email' => $this->getEmail(),
+	                ':endereco' => $this->getEndereco(),
+	                ':telefone'=> $this->getTelefone(),
+	                ':instituicao'=> $this->getInstituicao(),
+	                ':semestre' => $this->getSemestre(),
+	                ':link'=> $this->getLink(),
+	                ':resumo' => $this->getResumo()
+	            );
 
-		$query = "UPDATE inscritos SET categoria_id='".$this->getCategoriaId()."', 
-				  nome='".$this->getNome()."', endereco='".$this->getEndereco()."', 
-				  telefone='".$this->getTelefone()."', cidade='".$this->getCidade()."'
-				  WHERE email='".$this->getEmail()."'";
+				$query = 'UPDATE inscritos SET categoria_id = :categoria_id, nome =:nome, email = :email, endereco = :endereco, telefone = :telefone, cidade = :cidade, instituicao = :instituicao, semestre = :semestre, link = :link, resumo = :resumo';
+				$sth = $this->db->prepare($query);
+				$sth->execute($params);
 
-		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	    $stmt = $pdo->prepare($query);
-	    $stmt->execute();
+    			return '<p style="color:#333" > Inscrição já realizada com sucesso! <br/> <br/> Palestrantes - aguardem, pois em breve divulgaremos no facebook/site os palestrantes confirmados.</p>';
 
-	    return true;
+	    } catch(PDOException $e) {
+	    	return '<p style="color:red" >Erro ao realizar inscrição. Desculpe, tente novamente mais tarde.</p>';
+		}
 	}
 
 }
