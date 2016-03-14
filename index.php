@@ -7,11 +7,11 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- Styles -->
-<link href="public/css/fonts.css" rel="stylesheet"  type="text/css" charset="utf-8" />
-<link href="public/css/bootstrap.css" rel="stylesheet">
-<link href="public/css/style.css" rel="stylesheet">
-<link href="public/css/prettyPhoto.css" rel='stylesheet' id='prettyphoto-css'  type='text/css' media='all'>
-<link href="public/css/fontello.css" type="text/css" rel="stylesheet">
+<link href="flisol2016/public/css/fonts.css" rel="stylesheet"  type="text/css" charset="utf-8" />
+<link href="flisol2016/public/css/bootstrap.css" rel="stylesheet">
+<link href="flisol2016/public/css/style.css" rel="stylesheet">
+<link href="flisol2016/public/css/prettyPhoto.css" rel='stylesheet' id='prettyphoto-css'  type='text/css' media='all'>
+<link href="flisol2016/public/css/fontello.css" type="text/css" rel="stylesheet">
 <!--[if lt IE 7]>
         <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">
     <![endif]-->
@@ -22,19 +22,19 @@ body {
     padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 }
 </style>
-<link href="public/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="flisol2016/public/css/bootstrap-responsive.css" rel="stylesheet">
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 <!-- Favicon -->
-<link rel="shortcut icon" href="public/img/favicon.ico">
+<link rel="shortcut icon" href="flisol2016/public/img/favicon.ico">
 <!-- JQuery -->
-<script type="text/javascript" src="public/js/jquery.js"></script>
+<script type="text/javascript" src="flisol2016/public/js/jquery.js"></script>
 <!-- Load ScrollTo -->
-<script type="text/javascript" src="public/js/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript" src="flisol2016/public/js/jquery.scrollTo-1.4.2-min.js"></script>
 <!-- Load LocalScroll -->
-<script type="text/javascript" src="public/js/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="flisol2016/public/js/jquery.localscroll-1.2.7-min.js"></script>
 <!-- prettyPhoto Initialization -->
 <script type="text/javascript" charset="utf-8">
       $(document).ready(function(){
@@ -62,7 +62,7 @@ body {
         <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
         <!--<h1 class="brand"><a href="#top">FLISOL CEARÁ</a></h1>-->
-        <a class="navbar-brand" href="#"> <img src="public/img/logo-header.png" alt="">  </a>
+        <a class="navbar-brand" href="#"> <img src="flisol2016/public/img/logo-header.png" alt="">  </a>
         <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
         <nav class="pull-right nav-collapse collapse">
           <ul id="menu-main" class="nav">
@@ -85,12 +85,13 @@ body {
 <!-- ******************** HeaderWrap ********************-->
 <div id="headerwrap">
   <header class="clearfix">
-    <h1><span>FliSol 2016</span> Ceará </h1>
+    <!--<h1><span>FliSol 2016</span> Ceará </h1>-->
     <div class="container">
       <div class="row">
         <div class="span12">
-          <h2>Aprenda, ensine, instale, compartilhe!</h2>
-          <h2>Dia 16 de Abril / Ceará, Brasil</h2>
+          
+          <!--<h2>Aprenda, ensine, instale, compartilhe!</h2>
+          <h2>Dia 16 de Abril / Ceará, Brasil</h2>-->
           <input type="text" id="email-inscrever" placeholder="Digite um e-mail para se increver" class="cform-text" size="40" title="Digite um e-mail para se increver">
           <a href="#contact"> <input type="submit" id="submit-inscrever"  value="Inscreva-se" class="cform-submit"> </a>
         </div>
@@ -100,7 +101,7 @@ body {
           <ul class="icon">
             <li><a href="https://www.instagram.com/flisolceara/" target="_blank"><i class="icon-camera"></i></a></li>
             <li><a href="https://www.facebook.com/Flisol-Cear%C3%A1-230697460613894" target="_blank"><i class="icon-facebook-squared"></i></a></li>
-            <li><a href="https://github.com/flisolceara" target="_blank"><img src="public/img/github.png"></a></li>
+            <li><a href="https://github.com/flisolceara" target="_blank"><img src="flisol2016/public/img/github.png"></a></li>
           </ul>
         </div>
       </div>
@@ -117,7 +118,7 @@ body {
   <div class="container">
     <div class="row">
       
-          <div class="span12"> <div class="align"><img src="public/img/logo-2016.png" style="padding-bottom:20px;" /></div></div>
+          <div class="span12"> <div class="align"><img src="flisol2016/public/img/logo-2016.png" style="padding-bottom:20px;" /></div></div>
           <div class="span12">
             <div class="inside">
               <hgroup>
@@ -142,48 +143,48 @@ body {
     <!-- Five columns -->
     <div class="row">
       <div class="span2 offset1">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-1.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-1.jpg" alt=""> </div>
         <h3>Acaraú</h3>
       </div>
       <!-- ./span2 -->
       <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-2.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-2.jpg" alt=""> </div>
         <h3>Cariri</h3>
       </div>
       <!-- ./span2 -->
       <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-3.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-3.jpg" alt=""> </div>
         <h3>Canindé</h3>
       </div>
       <!-- ./span2 -->
       <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-4.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-4.jpg" alt=""> </div>
         <h3>Crateús</h3>
       </div>
       <!-- ./span2 -->
       <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-5.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-5.jpg" alt=""> </div>
         <h3>Fortaleza</h3>
       </div>
       <!-- ./span2 -->
 
     <div class="span2 offset1">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-6.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-6.jpg" alt=""> </div>
         <h3>Juazeiro do Norte</h3>
     </div>
     <!-- ./span2 -->
     <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-7.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-7.jpg" alt=""> </div>
         <h3>Quixadá</h3>
     </div>
     <!-- ./span2 -->
     <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-8.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-8.jpg" alt=""> </div>
         <h3>Russas</h3>
     </div>
     <!-- ./span2 -->
     <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-9.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-9.jpg" alt=""> </div>
         <h3>São Gonçalo do Amarante</h3>
     </div>
     <!-- ./span2 -->
@@ -216,7 +217,7 @@ body {
     <h1>Programação</h1>
     <div class="row">
       <div class="span4">
-        <div class="mask2"> <a href="img/prog-01.jpg" rel="prettyPhoto"><img src="public/img/prog-01.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="img/prog-01.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-01.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Palestras</h2>
@@ -226,7 +227,7 @@ body {
       </div>
       <!-- /.span4 -->
       <div class="span4">
-        <div class="mask2"> <a href="img/prog-02.jpg" rel="prettyPhoto"><img src="public/img/prog-02.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="img/prog-02.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-02.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Minicursos e Oficinas</h2>
@@ -236,7 +237,7 @@ body {
       </div>
       <!-- /.span4 -->
       <div class="span4">
-        <div class="mask2"> <a href="img/prog-03.jpg" rel="prettyPhoto"><img src="public/img/prog-03.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="img/prog-03.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-03.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Install Fest</h2>
@@ -249,7 +250,7 @@ body {
     <!-- /.row -->
     <div class="row">
       <div class="span4">
-        <div class="mask2"> <a href="img/prog-04.jpg" rel="prettyPhoto"><img src="public/img/prog-04.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="img/prog-04.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-04.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Debates</h2>
@@ -259,7 +260,7 @@ body {
       </div>
       <!-- /.span4 -->
       <div class="span4">
-        <div class="mask2"> <a href="img/prog-05.jpg" rel="prettyPhoto"><img src="public/img/prog-05.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="img/prog-05.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-05.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Sorteios</h2>
@@ -269,7 +270,7 @@ body {
       </div>
       <!-- /.span4 -->
       <div class="span4">
-        <div class="mask2"> <a href="img/prog-06.jpg" rel="prettyPhoto"><img src="public/img/prog-06.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="img/prog-06.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-06.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Encontre sua Comunidade</h2>
@@ -443,10 +444,10 @@ body {
 
 
 <!-- Loading the javaScript at the end of the page -->
-<script type="text/javascript" src="public/js/bootstrap.js"></script>
-<script type="text/javascript" src="public/js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="public/js/site.js"></script>
-<script type="text/javascript" src="public/js/jquery.mask.js"></script>
+<script type="text/javascript" src="flisol2016/public/js/bootstrap.js"></script>
+<script type="text/javascript" src="flisol2016/public/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="flisol2016/public/js/site.js"></script>
+<script type="text/javascript" src="flisol2016/public/js/jquery.mask.js"></script>
 
 <!--ANALYTICS CODE-->
 <script type="text/javascript">
@@ -494,7 +495,7 @@ $(document).ready(function() {
       var values = $(this).serialize();
 
       $.ajax({
-          url: "controller/FlisolController.php",
+          url: "flisol2016/controller/FlisolController.php",
           type: "post",
           data: values,
           success: function (response) {  
