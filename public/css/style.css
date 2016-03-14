@@ -25,7 +25,7 @@ CONTENTS:
 /* ---------------------------------------------------------------------------------------------------------- 
 01 Sensible defaults ----------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
-
+body {padding-top: 60px;}
 div, article, section, header, footer, nav, li {
 	position:relative;
 }
@@ -1113,7 +1113,57 @@ footer p {
  font-size: 4em;
 }
 }
-	
+
+.breadcrumb {
+    padding: 4px 0px;
+    margin: 0 0 20px;
+    list-style: none;
+    background-color: rgba(227, 231, 228, 1);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.class-radio .span3{
+      color: #555555;
+    font-family: 'Open Sans', sans serif !important;
+    border: 0;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 4px;
+    padding: 6px;
+    margin-left: 3px;
+}
+
+.label1, .label2{
+	background: rgba(227, 231, 228, 1);
+}
+
+.label1{
+	margin-left: 0 !important;
+}
+
+.tipo{
+	text-shadow: none !important;
+	color: #555555;
+	line-height: 35px;
+    padding: 10px;
+    margin: 9px;
+}
+
+.row-tipo{
+	margin-bottom: 12px;
+}
+
+input[type=radio]{
+	margin: 0 !important;
+}
+
+#theme-form select{
+	color: #555555 !important;
+	background: rgba(227, 231, 228, 1) !important;
+}
+
 	/* iPads (landscape) ----------- */
 	@media only screen  and (min-device-width : 768px)  and (max-device-width : 1024px)  and (orientation : landscape) {
 /* Styles */
@@ -1128,3 +1178,5 @@ footer p {
 	@media only screen  and (min-width : 1224px) {
 /* Styles */
 	}
+
+
