@@ -20,11 +20,13 @@ $params = array(
                 ':cidade' => $cidade
             );
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=inscricao', $username, $password);
+    $pdo = new PDO('mysql:host=localhost;dbname=flisol', $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $stmt = $pdo->prepare('INSERT INTO inscritos (categoria_id, nome, email, endereco, telefone, cidade) VALUES(:categoria_id, :nome, :email, :endereco, :telefone, :cidade)');
     $stmt->execute($params);
+
+
     print "Cadastro realizado com sucesso!";
 } catch(PDOException $e) {
     echo 'Error: ' . $e->getMessage();

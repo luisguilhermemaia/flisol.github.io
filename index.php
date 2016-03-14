@@ -1,5 +1,8 @@
-<?php ob_start(); ?>
-<?php include ("inscrever-banco.php"); ?>
+<?php 
+
+if( $_SERVER['REQUEST_METHOD']=='POST' ){
+  // include ('controller/FlisolController.php'); 
+}?>
 
 
 <!DOCTYPE HTML>
@@ -10,43 +13,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
-<!-- Styles -->
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link rel='stylesheet' id='prettyphoto-css'  href="css/prettyPhoto.css" type='text/css' media='all'>
-<link href="css/fontello.css" type="text/css" rel="stylesheet">
-<!--[if lt IE 7]>
-        <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">
-    <![endif]-->
-<!-- Google Web fonts -->
+
+<link href="public/css/bootstrap.css" rel="stylesheet">
+<link href="public/css/style.css" rel="stylesheet">
+<link rel='stylesheet' id='prettyphoto-css'  href="public/css/prettyPhoto.css" type='text/css' media='all'>
+<link href="public/css/fontello.css" type="text/css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<style>
-body {
-    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-}
-</style>
-<link href="css/bootstrap-responsive.css" rel="stylesheet">
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-<!-- Favicon -->
-<link rel="shortcut icon" href="img/favicon.ico">
-<!-- JQuery -->
-<script type="text/javascript" src="js/jquery.js"></script>
-<!-- Load ScrollTo -->
-<script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
-<!-- Load LocalScroll -->
-<script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
-<!-- prettyPhoto Initialization -->
+<link href="public/css/bootstrap-responsive.css" rel="stylesheet">
+<link rel="shortcut icon" href="public/img/favicon.ico">
+
+<script type="text/javascript" src="public/js/jquery.js"></script>
+<script type="text/javascript" src="public/js/jquery.scrollTo-1.4.2-min.js"></script>
+<script type="text/javascript" src="public/js/jquery.localscroll-1.2.7-min.js"></script>
+
 <script type="text/javascript" charset="utf-8">
-      $(document).ready(function(){
+    $(document).ready(function(){
         $("a[rel^='prettyPhoto']").prettyPhoto();
-      });
-    </script>
+    });
+</script>
 </head>
+
 <body>
 <!--******************** NAVBAR ********************-->
 <div class="navbar-wrapper">
@@ -84,8 +72,10 @@ body {
         <div class="span12">
           <h2>Usar, Estudar, Distribuir, Melhorar...</h2>
           <h2>16 de Abril / Ceará, Brasil</h2>
-          <input type="text" name="your-email" placeholder="Digite um e-mail para se increver" class="cform-text" size="40" title="your email">
-          <input type="submit" value="Inscreva-se" class="cform-submit">
+          <input type="text" id="email-inscrever" value="" name="your-email" placeholder="Digite um e-mail para se increver" class="cform-text" size="40" title="your email">
+          <a href="#contact">
+            <input type="submit" id="submit-inscrever" value="Inscreva-se" class="cform-submit">
+          </a>
         </div>
       </div>
       <div class="row">
@@ -108,40 +98,46 @@ body {
 <!--******************** Portfolio Section ********************-->
 <section id="portfolio" class="single-page scrollblock">
   <div class="container">
-    <div class="align"><img src="img/portfoliofli.jpg"/></div>
+    <div class="align"><img src="public/img/portfoliofli.jpg"/></div>
     <h1 id="folio-headline">Sobre o Evento</h1>
     <div class="row">
       <div class="span4">
-        <div class="mask2"> <a href="img/portfolio-01.jpg" rel="prettyPhoto"><img src="img/portfolio-01.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="public/img/portfolio-01.jpg" rel="prettyPhoto"><img src="public/img/portfolio-01.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>FLISoL</h2>
           </hgroup>
           <div class="entry-content">
-            <p>O Festival Latino Americano de Instalação de Software Livre (FLISOL) é o maior evento de divulgação de Software Livre da América Latina. Ele acontece desde 2005 e seu principal objetivo é promover o uso de software livre, apresentando sua filosofia, seu alcance, avanços e desenvolvimento ao público em geral.
-              </p>
-
+            <p>O Festival Latino Americano de Instalação de Software Livre (FLISOL) 
+               é o maior evento de divulgação de Software Livre da América Latina. 
+               Ele acontece desde 2005 e seu principal objetivo é promover o uso de software livre, 
+               apresentando sua filosofia, seu alcance, avanços e desenvolvimento ao público em geral.
+            </p>
           </div>
         </div>
         <!-- /.inside -->
       </div>
       <!-- /.span4 -->
       <div class="span4">
-        <div class="mask2"> <a href="img/portfolio-02.jpg" rel="prettyPhoto"><img src="img/portfolio-02.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="public/img/portfolio-02.jpg" rel="prettyPhoto"><img src="public/img/portfolio-02.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Palestras</h2>
           </hgroup>
           <div class="entry-content">
-            <p>Paralelamente acontecem palestras, apresentações e workshops, sobre temas locais, nacionais e latino-americanos sobre Software Livre, em toda a sua expressão: artística, acadêmica, empresarial e social.
-              Fique por dentro da revolução silenciosa que está acontecendo em várias áreas com o uso do Software Livre.</p>
+            <p>Paralelamente acontecem palestras, apresentações e workshops, sobre temas locais, 
+               nacionais e latino-americanos sobre Software Livre, em toda a sua expressão: artística, 
+               acadêmica, empresarial e social.
+               Fique por dentro da revolução silenciosa que está acontecendo em várias áreas com o uso do 
+               Software Livre.
+            </p>
            </div>
         </div>
         <!-- /.inside -->
       </div>
       <!-- /.span4 -->
       <div class="span4">
-        <div class="mask2"> <a href="img/portfolio-03.jpg" rel="prettyPhoto"><img src="img/intallfest.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="public/img/portfolio-03.jpg" rel="prettyPhoto"><img src="public/img/intallfest.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Install Fest</h2>
@@ -300,7 +296,7 @@ body {
     <h1>Palestrantes</h1>
     <!-- Three columns -->
     <div class="row">
-      <article class="span4 post"> <div class="text-center"><img class="img-news" src="img/gilmagno.jpg" alt=""></div>
+      <article class="span4 post"> <div class="text-center"><img class="img-news" src="public/img/gilmagno.jpg" alt=""></div>
         <div class="inside">
           <p class="post-date"><i class="icon-calendar"></i> 16 de Abril, 9:00h</p>
           <h2>Gil Magno</h2>
@@ -311,7 +307,7 @@ body {
         <!-- /.inside -->
       </article>
       <!-- /.span4 -->
-      <article class="span4 post"> <div class="text-center"> <img class="img-news" src="img/joel.jpg" alt=""></div>
+      <article class="span4 post"> <div class="text-center"> <img class="img-news" src="public/img/joel.jpg" alt=""></div>
         <div class="inside">
           <p class="post-date">16 de Abril, 9:00h</p>
           <h2>Joel Wallis</h2>
@@ -322,7 +318,7 @@ body {
         <!-- /.inside -->
       </article>
       <!-- /.span4 -->
-      <article class="span4 post"> <div class="text-center"><img class="img-news" src="img/Jepherson.jpg" alt=""></div>
+      <article class="span4 post"> <div class="text-center"><img class="img-news" src="public/img/Jepherson.jpg" alt=""></div>
         <div class="inside">
           <p class="post-date">16 de Abril, 9:00h</p>
           <h2>Jepherson Rodrigues</h2>
@@ -348,48 +344,48 @@ body {
     <!-- Five columns -->
     <div class="row">
       <div class="span2 offset1">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="img/portrait-1.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-1.jpg" alt=""> </div>
         <h3>Acaraú</h3>
       </div>
       <!-- ./span2 -->
       <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="img/portrait-2.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-2.jpg" alt=""> </div>
         <h3>Cariri</h3>
       </div>
       <!-- ./span2 -->
       <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="img/portrait-3.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-3.jpg" alt=""> </div>
         <h3>Canindé</h3>
       </div>
       <!-- ./span2 -->
       <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="img/portrait-4.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-4.jpg" alt=""> </div>
         <h3>Crateús</h3>
       </div>
       <!-- ./span2 -->
       <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="img/portrait-2.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-2.jpg" alt=""> </div>
         <h3>Fortaleza</h3>
       </div>
       <!-- ./span2 -->
 
     <div class="span2 offset1">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="img/portrait-1.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-1.jpg" alt=""> </div>
         <h3>Juazeiro do Norte</h3>
     </div>
     <!-- ./span2 -->
     <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="img/portrait-2.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-2.jpg" alt=""> </div>
         <h3>Quixadá</h3>
     </div>
     <!-- ./span2 -->
     <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="img/portrait-3.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-3.jpg" alt=""> </div>
         <h3>Russas</h3>
     </div>
     <!-- ./span2 -->
     <div class="span2">
-        <div class="teamalign"> <img class="team-thumb img-circle" src="img/portrait-4.jpg" alt=""> </div>
+        <div class="teamalign"> <img class="team-thumb img-circle" src="public/img/portrait-4.jpg" alt=""> </div>
         <h3>São Gonçalo do Amarante</h3>
     </div>
     <!-- ./span2 -->
@@ -423,53 +419,67 @@ body {
         <div class="row">
             <div class="span12">
                 <div class="cform" id="theme-form">
-                    <form action="inscrever-banco.php" method="post" target="_blank" class="cform-form">
-                        <div class="cform-form">
-                          <div class="radio">
-                              <label>
-                                  <input type="radio" name="categoria_id" value="1" checked>
-                                  Estudante
-                              </label>
-                          </div>
-                          <div class="radio">
-                              <label>
-                                  <input type="radio" name="categoria_id" value="2">
-                                  Palestrante
-                              </label>
-                          </div>
-                        </div>
-                        <div class="cform-form">
-                          <label for="nome">Nome</label>
-                          <input type="text" class="form-control" id="nome" name="nome" placeholder="Insira seu nome">
-                        </div>
-                        <div class="cform-form">
-                          <label for="email">Email</label>
-                          <input type="email" class="form-control" id="email" name="email" placeholder="Insira seu e-mail">
-                        </div>
-                        <div class="cform-form">
-                          <label for="endereco">Endereço</label>
-                          <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Insira seu endereço">
-                        </div>
-                        <div class="cform-form">
-                          <label for="telefone">Telefone</label>
-                          <input type="text" class="form-control" id="telefone" name="telefone" size="20" placeholder="Insira seu telefone">
+                    <form id="form-inscrito" action="" method="post" class="cform-form">
+                        
+                        <div class="row"> 
+                            <div class="span6">
+                                <span>
+                                    <input type="text" name="nome" required  placeholder="Nome" class="cform-text" size="40" title="Nome">
+                                </span>
+                            </div>
+                            <div class="span6">
+                                <span>
+                                    <input type="text" id="email-cadastro" required  value="" name="email" placeholder="Email" class="cform-text" size="40" title="Email">
+                                </span>
+                            </div>
                         </div>
 
-                        <div class="cform-form">
-                            <label for="cidade">Escolha sua Cidade</label>
-                            <select class="cform-form" name="cidade" id="cidade">
-                                <option>Acarau</option>
-                                <option>Caninde</option>
-                                <option>Crateus</option>
-                                <option>Fortaleza</option>
-                                <option>Juazeiro do Norte</option>
-                                <option>Quixada</option>
-                                <option>Russas</option>
-                                <option>São Gonçalo do Amarante</option>
-                            </select>
+                        <div class="row"> 
+                            <div class="span6">
+                                <span>
+                                    <input type="text" name="endereco" required  placeholder="Endereço" class="cform-text" size="40" title="Endereço">
+                                </span>
+                            </div>
+                            <div class="span6">
+                                <span>
+                                    <input type="text" name="telefone" required  placeholder="Telefone" class="cform-text" size="40" title="Telefone">
+                                </span>
+                            </div>
                         </div>
-                        <div>
-                            <input type="submit" id="enviar" value="enviar" class="cform-submit pull-left">
+
+                        <div class="row row-tipo">
+                            <div class="span6 class-radio">
+                              <label class="span3 label1">
+                                  <input type="radio" name="categoria_id" value="1" checked>
+                                  <span class="tipo">Estudante</span>
+                              </label>
+                              <label class="span3 label2">
+                                  <input type="radio" name="categoria_id" value="2">
+                                  <span class="tipo">Palestrante</span>
+                              </label>
+                            </div>
+                            <div class="span6">
+                                <select name="cidade" id="cidade" required >
+                                    <option value="fortaleza" >Fortaleza</option>
+                                    <option value="acarau">Acarau</option>
+                                    <option value="caninde">Caninde</option>
+                                    <option value="crateus">Crateus</option>
+                                    <option value="juazeiro-do-norte">Juazeiro do Norte</option>
+                                    <option value="quixada">Quixada</option>
+                                    <option value="russas">Russas</option>
+                                    <option value="sao-goncalo-do-amarante">São Gonçalo do Amarante</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row"> 
+                            <div class="span6">
+                                <input type="submit" id="enviar" value="enviar" class="cform-submit pull-left">
+                            </div>
+                        </div>
+                        <div id="alert" class="alert alert-block" style="display:none;">
+                          <button type="button" class="close" data-dismiss="alert">&times;</button>
+                          <h4>Warning!</h4>
+                          Best check yo self, you're not...
                         </div>
                     </form>
                 </div>
@@ -489,13 +499,64 @@ body {
   </div>
   <!-- ./container -->
 </div>
+
+<div id="myModal" class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>Sucesso!</h3>
+  </div>
+  <div class="modal-body">
+    <p>Cadastro Realizado com Sucesso</p>
+  </div>
+</div>
+
+<div id="myModal1" class="modal fade alert alert-success" tabindex="-1" role="dialog">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4>Sucesso!</h4>
+  Cadastro efetuado com sucesso!
+</div>
+
 <!-- Loading the javaScript at the end of the page -->
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-<script type="text/javascript" src="js/site.js"></script>
+<script type="text/javascript" src="public/js/bootstrap.js"></script>
+<script type="text/javascript" src="public/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript" src="public/js/site.js"></script>
+<script type="text/javascript" src="public/js/jquery.mask.js"></script>
 
 <!--ANALYTICS CODE-->
 <script type="text/javascript">
+
+  $("#submit-inscrever").on("click", function(e){
+        e.preventDefault();
+        
+        var email = $("#email-inscrever").val();
+        var emailCadastro = $("#email-cadastro").val(email.toLowerCase());
+
+        if(email.length >= 1){
+            $("#email-inscrever").val("");
+        }
+  });
+
+  $('[name=telefone]').mask('(00) 0000-0000');
+
+  $( "#form-inscrito" ).submit(function(e) {
+    e.preventDefault();
+     
+    var values = $(this).serialize();
+
+    $.ajax({
+        url: "controller/FlisolController.php",
+        type: "post",
+        data: values,
+        success: function (response) {            
+            $('#myModal').modal();   
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(textStatus, errorThrown);
+        }
+    });
+
+});
+
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-29231762-1']);
   _gaq.push(['_setDomainName', 'dzyngiri.com']);
