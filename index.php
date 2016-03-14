@@ -217,7 +217,7 @@ body {
     <h1>Programação</h1>
     <div class="row">
       <div class="span4">
-        <div class="mask2"> <a href="img/prog-01.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-01.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="flisol2016/public/img/prog-01.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-01.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Palestras</h2>
@@ -227,7 +227,7 @@ body {
       </div>
       <!-- /.span4 -->
       <div class="span4">
-        <div class="mask2"> <a href="img/prog-02.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-02.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="flisol2016/public/img/prog-02.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-02.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Minicursos e Oficinas</h2>
@@ -237,7 +237,7 @@ body {
       </div>
       <!-- /.span4 -->
       <div class="span4">
-        <div class="mask2"> <a href="img/prog-03.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-03.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="flisol2016/public/img/prog-03.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-03.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Install Fest</h2>
@@ -250,7 +250,7 @@ body {
     <!-- /.row -->
     <div class="row">
       <div class="span4">
-        <div class="mask2"> <a href="img/prog-04.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-04.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="flisol2016/public/img/prog-04.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-04.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Debates</h2>
@@ -260,7 +260,7 @@ body {
       </div>
       <!-- /.span4 -->
       <div class="span4">
-        <div class="mask2"> <a href="img/prog-05.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-05.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="flisol2016/public/img/prog-05.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-05.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Sorteios</h2>
@@ -270,7 +270,7 @@ body {
       </div>
       <!-- /.span4 -->
       <div class="span4">
-        <div class="mask2"> <a href="img/prog-06.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-06.jpg" alt=""></a> </div>
+        <div class="mask2"> <a href="flisol2016/public/img/prog-06.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-06.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
             <h2>Encontre sua Comunidade</h2>
