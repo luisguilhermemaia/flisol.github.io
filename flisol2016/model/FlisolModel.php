@@ -13,7 +13,7 @@ class FlisolModel{
 	private $semestre;
 
 	public function __construct(){
-		$pdo = new PDO('mysql:host=localhost;dbname=flisol2016', "root", "");
+		$pdo = new PDO('mysql:host=localhost;dbname=flisol2016', "root", " ");
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$this->db = $pdo ;
 	}

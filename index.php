@@ -12,6 +12,9 @@
 <link href="flisol2016/public/css/style.css" rel="stylesheet">
 <link href="flisol2016/public/css/prettyPhoto.css" rel='stylesheet' id='prettyphoto-css'  type='text/css' media='all'>
 <link href="flisol2016/public/css/fontello.css" type="text/css" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+
 <!--[if lt IE 7]>
         <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">
     <![endif]-->
@@ -394,6 +397,7 @@ body {
                             </div>
                         </div>
 
+                        <div class="g-recaptcha" data-sitekey="6LcL0xoTAAAAAC2Uwthp8EE80FBSZCoYWzHBMoKR"></div>
 
                         <div class="row"> 
                             <div class="span6">
@@ -438,12 +442,13 @@ body {
     <h3>FLISOL 2016 - Ceará - Inscrição</h3>
   </div>
   <div id="myModal-msg" class="modal-body">
-    
+
   </div>
 </div>
 
 
 <!-- Loading the javaScript at the end of the page -->
+
 <script type="text/javascript" src="flisol2016/public/js/bootstrap.js"></script>
 <script type="text/javascript" src="flisol2016/public/js/jquery.prettyPhoto.js"></script>
 <script type="text/javascript" src="flisol2016/public/js/site.js"></script>
@@ -499,7 +504,7 @@ $(document).ready(function() {
           type: "post",
           data: values,
           success: function (response) {  
-              $('#myModal-msg').html(response);         
+              $('#myModal-msg').html(response);
               $('#myModal').modal();   
           },
           error: function(jqXHR, textStatus, errorThrown) {
