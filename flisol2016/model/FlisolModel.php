@@ -13,7 +13,7 @@ class FlisolModel{
 	private $semestre;
 
 	public function __construct(){
-		$pdo = new PDO('mysql:host=localhost;dbname=flisol2016', "root", " ");
+		$pdo = new PDO('mysql:host=localhost;dbname=flisol2016', "root", "root");
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$this->db = $pdo ;
 	}
@@ -139,8 +139,9 @@ class FlisolModel{
     		return $this->atualizarInscrito();
     	}
 		
-		
-	}	
+
+
+	}
 
 	public function existeInscritoEmail(){
 		$query = "SELECT count(*) as total FROM inscritos WHERE email like :email";
@@ -170,7 +171,7 @@ class FlisolModel{
 	                ':resumo' => $this->getResumo()
 	            );
 
-				$query = 'UPDATE inscritos SET categoria_id = :categoria_id, nome =:nome, email = :email, endereco = :endereco, telefone = :telefone, cidade = :cidade, instituicao = :instituicao, semestre = :semestre, link = :link, resumo = :resumo';
+				$query = 'UPDATE inscritos SET categoria_id = :categoria_id, nome =:nome, email = :email, endereco = :endereco, telefone = :telefone, cidade = :cidade, instituicao = :instituicao, semestre = :semestre, link = :link, resumo = :resumo WHERE email = :email';
 				$sth = $this->db->prepare($query);
 				$sth->execute($params);
 

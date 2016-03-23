@@ -32,7 +32,7 @@ if ($response != null && $response->success) {
         $flisol->setCidade($_POST['cidade']);
         $flisol->setCategoriaId($_POST['categoria_id']);
         $flisol->setNome($_POST['nome']);
-        $flisol->setEmail($_POST['email']);
+        $flisol->setEmail(strtolower($_POST['email']));
         $flisol->setEndereco($_POST['endereco']);
         $flisol->setTelefone($_POST['telefone']);
 
