@@ -69,11 +69,12 @@ body {
         <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
         <nav class="pull-right nav-collapse collapse">
           <ul id="menu-main" class="nav">
-            <li><a title="portfolio" href="#portfolio">Dia 16 de Abril </a></li>
-            <li><a title="team" href="#team">Cidades</a></li>
-            <li><a title="services" href="#services">Programação</a></li>
-            <li><a title="news" href="#news">Palestrantes</a></li>
-            <li><a title="contact" href="#contact">Inscreva-se</a></li>
+            <li><a title="Portifolio" href="#portfolio">Dia 16 de Abril </a></li>
+            <li><a title="Cidade" href="#team">Cidades</a></li>
+            <li><a title="Programação" href="#services">Programação</a></li>
+            <li><a title="Paletrantes" href="#news">Palestrantes</a></li>
+            <li><a title="Inscreva-se" href="#contact">Inscreva-se</a></li>
+            <li><a title="Certificados"  href=" #certification">Certificados 2015</a></li>
           </ul>
         </nav>
       </div>
@@ -414,10 +415,36 @@ body {
   <!-- /.container -->
 </section>
 
-<section id="team" class="single-page scrollblock">
+
+<section id="certification" class="single-page scrollblock">
+    <div class="container">
+        <div class="align"><i class="icon-pencil-circled"></i></div>
+        <h1>Certificados FLISOL 2015</h1>
+        <div class="row">
+            <div class="span12">
+                <div class="cform" id="theme-form">
+
+                <form name="emailinfo" action="http://flisolce.org/certificados/flisol2015/index.php" method="GET">
+                 <div class="row row-tipo">
+                    <div class="span12">
+                      <p>
+                          Estão disponíveis os certificados do FLISOL 2015. Digite seu e-mail de inscrição no FLISOL 2015:
+                      </p>
+                      <p><input type="text" name="email" value="" required placeholder="E-mail" /></p>
+                      <p><input type="submit" value="Certificado" /></p>
+                      </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="social" class="single-page scrollblock">
   <div class="container">
     <div class="align"><i class="icon-chat"></i></div>
-    <h1>Contato</h1>
+    <h1>Siga-nos</h1>
     <div class="row">
       <div class="span12">
         <div style="margin:auto;max-width: 500px; padding:20px;"><div class="fb-page" style="margin:auto;" data-tabs="timeline,events,messages" data-href="https://www.facebook.com/Flisol-Cear&#xe1;-230697460613894" data-tabs="messages" data-width="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div></div>
@@ -426,6 +453,9 @@ body {
     
   </div>
 </section>
+
+
+
 <div class="footer-wrapper">
   <div class="container">
     <footer>

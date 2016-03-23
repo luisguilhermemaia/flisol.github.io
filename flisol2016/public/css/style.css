@@ -558,26 +558,32 @@ article .inside {
 }
 /* Team and Contact */
 
-section#team, section#news {
+section#team, section#news, section#certification  {
 	color: #fff;
 	background:#FF8E2A;
 }
-section#team .align, section#contact .align {
+section#team .align, section#contact .align, section#certification .align, section#social .align{
 	font-size: 6em;
 	text-align: center;
 }
-#team h1, #contact h1 {
+#team h1, #contact h1 , #certification h1, , section#social h1{
 	font-size: 3em;
 	margin-bottom: 1em;
 	margin-top: 0.5em;
 }
-#contact, #team {
+#contact, #team, #certification, #social{
 	padding-top: 4.75em;
 }
 #team {
 	padding-bottom: 0;
 }
 #contact {
+	padding-bottom: 0;
+}
+#certification{
+	padding-bottom: 0;
+}
+#social{
 	padding-bottom: 0;
 }
 /* team */
@@ -1064,6 +1070,7 @@ footer p {
  section#services h2, section#services ul {
  text-align: center;
 }
+
 		
 
 	    /* Testimonials */
@@ -1158,6 +1165,10 @@ footer p {
 
 .row-tipo{
 	margin-bottom: 12px;
+}
+
+.g-recaptcha {
+	padding: 20px;
 }
 
 .palestrante-itens{
