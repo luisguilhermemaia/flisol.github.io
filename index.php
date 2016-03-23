@@ -424,7 +424,7 @@ body {
             <div class="span12">
                 <div class="cform" id="theme-form">
 
-                <form name="emailinfo" action="http://flisolce.org/certificados/flisol2015/index.php" method="GET">
+                <form name="emailinfo" target="_blank" action="http://flisolce.org/certificados/flisol2015/index.php" method="GET">
                  <div class="row row-tipo">
                     <div class="span12">
                       <p>
