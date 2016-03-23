@@ -191,6 +191,10 @@ body {
         <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-9.jpg" alt=""> </div>
         <h3>São Gonçalo do Amarante</h3>
     </div>
+    <div class="span2">
+        <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-10.jpg" alt=""> </div>
+        <h3>Sobral</h3>
+    </div>
     <!-- ./span2 -->
 
     <!-- ./span2 -->
