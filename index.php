@@ -535,7 +535,9 @@ $(document).ready(function() {
           data: values,
           success: function (response) {  
               $('#myModal-msg').html(response);
-              $('#myModal').modal();   
+              $('#myModal').modal();
+              $('#form-inscrito')[0].reset();   
+              grecaptcha.reset();
           },
           error: function(jqXHR, textStatus, errorThrown) {
               console.log(textStatus, errorThrown);
