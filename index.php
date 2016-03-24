@@ -261,7 +261,7 @@ body {
         <div class="mask2"> <a href="flisol2016/public/img/prog-04.jpg" rel="prettyPhoto"><img src="flisol2016/public/img/prog-04.jpg" alt=""></a> </div>
         <div class="inside">
           <hgroup>
-            <h2>Debates</h2>
+            <h2>Fórum de Startups</h2>
           </hgroup>
         </div>
         <!-- /.inside -->
