@@ -294,21 +294,63 @@ body {
 </section>
 
 
+<!--******************** Palestrante Section ********************-->
+<!--******************** Services Section ********************-->
 <!--******************** News Section ********************-->
 <section id="news" class="single-page scrollblock">
-  <div class="container">
-    <div class="align"><i class="icon-vcard"></i></div>
-    <h1>Palestrantes</h1>
-    <!-- Three columns -->
-    <div class="row">
-       em breve ..
-    </div>
-    <!-- /.row -->
+    <div class="container">
+        <div class="align"><i class="icon-vcard"></i></div>
+        <h1>Palestrantes</h1>
+        <!-- Three columns -->
+        <div class="row">
+            <article class="span4 post"> <a href="flisol2016/public/img/prof-ivan.png" rel="prettyPhoto"><img class="img-news" src="flisol2016/public/img/prof-ivan.png" alt=""></a>
+                <div class="inside">
+                    <p class="post-date"><i class="icon-calendar"></i> Itic Digital</p>
+                    <h2>Ivan Oliveira</h2>
+                    <div class="entry-content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. &hellip;</p>
 
-  </div>
-  <!-- /.container -->
+                </div>
+                <!-- /.inside -->
+            </article>
+            <!-- /.span4 -->
+            <article class="span4 post"> <a href="flisol2016/public/img/laryssa-muniz.jpg" rel="prettyPhoto"><img class="img-news" src="flisol2016/public/img/laryssa-muniz.jpg" alt=""></a>
+                <div class="inside">
+                    <p class="post-date">Brain Up</p>
+                    <h2>Laryssa Muniz</h2>
+                    <div class="entry-content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. &hellip;</p>
+
+                </div>
+                <!-- /.inside -->
+            </article>
+            <!-- /.span4 -->
+            <article class="span4 post"> <a href="flisol2016/public/img/ben-rainir.jpg" rel="prettyPhoto"><img class="img-news" src="flisol2016/public/img/ben-rainir.jpg" alt=""></a>
+                <div class="inside">
+                    <p class="post-date">Brain Up</p>
+                    <h2>Ben Rainir</h2>
+                    <div class="entry-content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. &hellip;</p>
+
+                </div>
+                <!-- /.inside -->
+            </article>
+            <!-- /.span4 -->
+            <article class="span4 "></article>
+            <article class="span4 post"> <a href="flisol2016/public/img/pales.jpg" rel="prettyPhoto"><img class="img-news" src="flisol2016/public/img/pales.jpg" alt=""></a>
+                <div class="inside">
+                    <h2>Seja um palestrante também</h2>
+                    <div class="entry-content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. &hellip;</p>
+
+                </div>
+                <!-- /.inside -->
+            </article>
+            <article class="span4 "></article>
+        </div>
+        <!-- /.row -->
+    <!-- /.container -->
 </section>
-
 
 <!--******************** Contact Section ********************-->
 <section id="contact" class="single-page scrollblock">
@@ -526,7 +568,7 @@ $(document).ready(function() {
 
  
 
-    $('[name=telefone]').mask('(00) 0000-0000');
+    $('[name=telefone]').mask('(00) 00000-0000');
 
     $( "#form-inscrito" ).submit(function(e) {
       e.preventDefault();

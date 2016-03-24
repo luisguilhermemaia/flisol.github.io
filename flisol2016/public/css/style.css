@@ -436,6 +436,7 @@ section#portfolio .align {
 
 section#services {
 	padding-bottom: 9.5em;
+
 }
 section i {
 	color: #1A65A5;
@@ -482,6 +483,7 @@ section#services .span3:hover {
 	background:#e3e3e3;
 	box-shadow: 1px 1px 6px #C1BAC1;
 }
+
 /* Testimonials */
 
 section#testimonials {
@@ -524,6 +526,7 @@ section#news .align {
 }
 article.post {
 	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.7);
+	margin-top: 20px;
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
@@ -548,13 +551,17 @@ article .inside {
 	font-size: 3em;
 	margin-bottom: 1em;
 	margin-top: 0.5em;
+
 }
 #news h2 {
 	font-size: 21px;
 	margin-top: 24px;
 	margin-bottom: 16px;
-	color: #FF8E2A;
+	color: #1A65A5;
 	clear: right;
+}
+#news p {
+	color: #1A65A5;
 }
 /* Team and Contact */
 
@@ -562,6 +569,7 @@ section#team, section#news, section#certification  {
 	color: #fff;
 	background:#FF8E2A;
 }
+
 section#team .align, section#contact .align, section#certification .align, section#social .align{
 	font-size: 6em;
 	text-align: center;
@@ -1029,6 +1037,8 @@ footer p {
 		#news h1 {
  background: transparent;
 }
+
+
  #news h1 span {
  background: transparent;
  padding: 0;
