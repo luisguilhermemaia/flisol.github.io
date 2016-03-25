@@ -69,12 +69,12 @@ body {
         <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
         <nav class="pull-right nav-collapse collapse">
           <ul id="menu-main" class="nav">
-            <li><a title="Portifolio" href="#portfolio">Dia 16 de Abril </a></li>
+            <li><a title="Portifolio" href="#portfolio">Flisol </a></li>
             <li><a title="Cidade" href="#team">Cidades</a></li>
             <li><a title="Programação" href="#services">Programação</a></li>
             <li><a title="Paletrantes" href="#news">Palestrantes</a></li>
-            <li><a title="Inscreva-se" href="#contact">Inscreva-se</a></li>
-            <li><a title="Certificados"  href=" #certification">Certificados 2015</a></li>
+            <li><a title="Inscreva-se" href="#contact">Inscrição</a></li>
+            <li><a title="Certificados"  href=" #certification">Certificados</a></li>
           </ul>
         </nav>
       </div>
@@ -126,7 +126,7 @@ body {
           <div class="span12">
             <div class="inside">
               <hgroup>
-                <h2>Dia 16 de Abril - Festival Latino Americano de Instalação de Software Livre do Ceará </h2>
+                <h2>Dia 16 de Abril de 2016 - Festival Latino Americano de Instalação de Software Livre do Ceará </h2>
               </hgroup>
               <div class="entry-content">
                 <p>O FLISoL é um evento internacional, realizado anualmente, e que ocorre de forma simultânea em diversas cidades da América Latina. O FLISoL é um evento descentralizado, onde diversas comunidades organizam e realizam seu festival, de forma voluntária, tendo como principal objetivo promover o uso de software livre, apresentando sua filosofia, alcance, avanços e desenvolvimento ao público em geral.</p>
