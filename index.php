@@ -381,7 +381,7 @@ body {
                                     <option value="fortaleza" selected="selected">Fortaleza</option>
                                     <option value="juazeiro-do-norte">Juazeiro do Norte</option>
                                     <option value="quixada">Quixada</option>
-                                    <option value="sao-goncalo-do-amarante">Redenção</option>
+                                    <option value="redencao">Redenção</option>
                                     <option value="russas">Russas</option>
                                     <option value="sao-goncalo-do-amarante">São Gonçalo do Amarante</option>
 
