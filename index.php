@@ -146,7 +146,7 @@ body {
     <h1>Cidades</h1>
     <!-- Five columns -->
     <div class="row">
-      <div class="span2 offset1">
+      <div class="span2 ">
         <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-1.jpg" alt=""> </div>
         <h3>Acaraú</h3>
       </div>
@@ -172,7 +172,7 @@ body {
       </div>
       <!-- ./span2 -->
 
-    <div class="span2 offset1">
+    <div class="span2 ">
         <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-6.jpg" alt=""> </div>
         <h3>Juazeiro do Norte</h3>
     </div>
@@ -180,6 +180,11 @@ body {
     <div class="span2">
         <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-7.jpg" alt=""> </div>
         <h3>Quixadá</h3>
+    </div>
+    <!-- ./span2 -->
+    <div class="span2">
+        <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-11.jpg" alt=""> </div>
+        <h3>Redenção</h3>
     </div>
     <!-- ./span2 -->
     <div class="span2">
@@ -308,7 +313,8 @@ body {
                     <p class="post-date"><i class="icon-calendar"></i> Itic Digital</p>
                     <h2>Ivan Oliveira</h2>
                     <div class="entry-content">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. &hellip;</p>
+                        <p> Professor no IFCE. Formação técnica em Telecomunicações em ETFCE, graduação em Engenharia Elétrica com ênfase em Teleinformática pela UFC, mestrado em Comunicações Móveis pelo Politécnico de Turim Itália e mestrado em Teleinformática pela UFC. </p>
+                        <p>Possui atuação em pesquisas soluções e serviços de inovação tecnológica para empresas e administração pública; criação e customização de softwares livres e o desenvolvimento de sistemas especialistas para automação de processos.</p>
 
                 </div>
                 <!-- /.inside -->
@@ -319,7 +325,8 @@ body {
                     <p class="post-date">Brain Up</p>
                     <h2>Laryssa Muniz</h2>
                     <div class="entry-content">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. &hellip;</p>
+                        <p>Possui graduação em Telemática, e especialização em Engenharia de Software ­na Estácio FIC. Atualmente é aluna de Mestrado em Ciências da Computação na UECE, sendo bolsista FIT/FUNCAP.</p>
+                        <p> Tem experiência principalmente no desenvolvimento de sistemas para web/mobile, tais como: Projeto Portal Hidrológico do Ceara - Nível Diário - O nível diário dos reservatórios do Estado do Ceará. Participa do grupo de engenharia de software da UECE - GESAD. </p>
 
                 </div>
                 <!-- /.inside -->
@@ -330,7 +337,8 @@ body {
                     <p class="post-date">Brain Up</p>
                     <h2>Ben Rainir</h2>
                     <div class="entry-content">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. &hellip;</p>
+                        <p>Cursou em Ciências da Computação pela UFC. Possui mais de 10 anos de experiência em desenvolvimento de soluções web/mobile ; Atualmente é empreendedor e Fundador da Brain UP - Empresa de especilizada em soluções web/mobile.</p> 
+                        <p>Certificado Scrum Master pela ScrumAliance. Entusiasta do movimento software livre, startups, empreendedorismo para desenvolviento de novos produtos, projetos de pesquisa e inovação com foco em IOT, hardware livre (arduino, raspberry PI). </p>
 
                 </div>
                 <!-- /.inside -->
@@ -341,7 +349,7 @@ body {
                 <div class="inside">
                     <h2>Seja um palestrante também</h2>
                     <div class="entry-content">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. &hellip;</p>
+                        <p> Não basta apenas aprender, e utilizar, na filosofia da comunidade de software livre o mais importante é compartilhar e trocar experiências.</p>
 
                 </div>
                 <!-- /.inside -->
@@ -373,8 +381,10 @@ body {
                                     <option value="fortaleza" selected="selected">Fortaleza</option>
                                     <option value="juazeiro-do-norte">Juazeiro do Norte</option>
                                     <option value="quixada">Quixada</option>
+                                    <option value="sao-goncalo-do-amarante">Redenção</option>
                                     <option value="russas">Russas</option>
                                     <option value="sao-goncalo-do-amarante">São Gonçalo do Amarante</option>
+
                                 </select>
                             </div>
                         
