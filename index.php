@@ -18,8 +18,8 @@
 <!--[if lt IE 7]>
         <link href="css/fontello-ie7.css" type="text/css" rel="stylesheet">
     <![endif]-->
-<!-- Google Web fonts -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<!-- Google Web fonts
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
 <style>
 body {
     padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
@@ -499,10 +499,11 @@ body {
 
 <section id="social" class="single-page scrollblock">
   <div class="container">
-    <div class="align"><i class="icon-chat"></i></div>
-    <h1>Siga-nos</h1>
+    <div class="align"><i class="icon-thumbs-up"></i></div>
+    <h1>Realização</h1>
     <div class="row">
       <div class="span12">
+        <img src="flisol2016/public/img/itic.jpg" style="margin: auto" />
         <div style="margin:auto;max-width: 500px; padding:20px;"><div class="fb-page" style="margin:auto;" data-tabs="timeline,events,messages" data-href="https://www.facebook.com/Flisol-Cear&#xe1;-230697460613894" data-tabs="messages" data-width="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div></div>
       </div>
     </div>
