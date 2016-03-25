@@ -338,7 +338,7 @@ body {
                     <h2>Ben Rainir</h2>
                     <div class="entry-content">
                         <p>Cursou em Ciências da Computação pela UFC. Possui mais de 10 anos de experiência em desenvolvimento de soluções web/mobile ; Atualmente é empreendedor e Fundador da Brain UP - Empresa de especilizada em soluções web/mobile.</p> 
-                        <p>Certificado Scrum Master pela ScrumAliance. Entusiasta do movimento software livre, startups, empreendedorismo para desenvolviento de novos produtos, projetos de pesquisa e inovação com foco em IOT, hardware livre (arduino, raspberry PI). </p>
+                        <p>Certificado Scrum Master pela ScrumAliance. Entusiasta do movimento software livre, startups, empreendedorismo para desenvolviento de novos produtos, projetos de pesquisa e inovação com foco em IOT, hardware livre (arduino, raspberry pi). </p>
 
                 </div>
                 <!-- /.inside -->
