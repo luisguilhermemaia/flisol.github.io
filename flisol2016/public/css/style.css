@@ -350,7 +350,7 @@ section.single-page {
 section.single-page h1 {
 	text-align: center;
 	font-family:  'Conv_Comfortaa-Regular',Sans-Serif;
-	margin-bottom: 2em; /* 72px */
+	margin-bottom: 0.5em; /* 72px */
 	font-size: 2.25em; /* 36px */
 }
 #feature {
@@ -576,7 +576,7 @@ section#team .align, section#contact .align, section#certification .align, secti
 }
 #team h1, #contact h1 , #certification h1, , section#social h1{
 	font-size: 3em;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 	margin-top: 0.5em;
 }
 #contact, #team, #certification, #social{

@@ -499,9 +499,10 @@ body {
 
 <section id="social" class="single-page scrollblock">
   <div class="container">
+  <div class="align"><i class="icon-thumbs-up"></i></div>
     <h1>Realização</h1>
     <div class="row">
-      <div class="span12"  style="text-align: center;">
+      <div class="span12"  style="text-align: center; padding-bottom: 20px;">
         <img src="flisol2016/public/img/itic.jpg"/>
       </div>
         <div style="margin:auto;max-width: 500px; padding:20px;"><div class="fb-page" style="margin:auto;" data-tabs="timeline,events,messages" data-href="https://www.facebook.com/Flisol-Cear&#xe1;-230697460613894" data-tabs="messages" data-width="500px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div></div>
