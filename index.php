@@ -449,7 +449,7 @@ body {
                         <div class="row palestrante-itens"> 
                             <div class="span12">
                                 <span>
-                                    <input type="text" name="resumo"  placeholder="Resumo sobre você" class="cform-text" size="40" title="Resumo">
+                                    <textarea  name="resumo"  placeholder="Resumo sobre você" class="cform-text" size="40" rows="5" title="Resumo"></textarea>
                                 </span>
                             </div>
                         </div>

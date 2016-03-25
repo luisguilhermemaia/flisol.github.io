@@ -112,7 +112,7 @@ class FlisolModel{
 
     public function adicionarInscrito(){
 
-    	if (!$this->existeInscritoEmail()){
+    	//if (!$this->existeInscritoEmail()){
     		try {
 				$params = array(
 					':cidade' => $this->getCidade(),
@@ -135,9 +135,9 @@ class FlisolModel{
 		    } catch(PDOException $e) {
 	    	return '<p style="color:red" >Erro ao realizar inscrição. Desculpe, tente novamente mais tarde.</p>';
 			}
-    	}else{
-    		return $this->atualizarInscrito();
-    	}
+    	//}else{
+    	//	return $this->atualizarInscrito();
+    	//}
 		
 
 
