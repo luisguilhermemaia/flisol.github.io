@@ -499,7 +499,6 @@ body {
 
 <section id="social" class="single-page scrollblock">
   <div class="container">
-    <div class="align"><i class="icon-thumbs-up"></i></div>
     <h1>Realização</h1>
     <div class="row">
       <div class="span12"  style="text-align: center;">
