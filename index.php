@@ -310,8 +310,8 @@ body {
         <div class="row">
             <article class="span4 post"> <a href="flisol2016/public/img/prof-ivan.png" rel="prettyPhoto"><img class="img-news" src="flisol2016/public/img/prof-ivan.png" alt=""></a>
                 <div class="inside">
-                    <p class="post-date"><i class="icon-calendar"></i> Itic Digital</p>
-                    <h2>Ivan Oliveira</h2>
+                    <p class="post-date"><i class="icon-calendar"></i> Itic Digital - ivan_ufc@yahoo.com.br</p>
+                    <h2>Ivan Oliveira </h2>
                     <div class="entry-content">
                         <p> Professor no IFCE. Formação técnica em Telecomunicações em ETFCE, graduação em Engenharia Elétrica com ênfase em Teleinformática pela UFC, mestrado em Comunicações Móveis pelo Politécnico de Turim Itália e mestrado em Teleinformática pela UFC. </p>
                         <p>Possui atuação em pesquisas soluções e serviços de inovação tecnológica para empresas e administração pública; criação e customização de softwares livres e o desenvolvimento de sistemas especialistas para automação de processos.</p>
@@ -322,7 +322,7 @@ body {
             <!-- /.span4 -->
             <article class="span4 post"> <a href="flisol2016/public/img/laryssa-muniz.jpg" rel="prettyPhoto"><img class="img-news" src="flisol2016/public/img/laryssa-muniz.jpg" alt=""></a>
                 <div class="inside">
-                    <p class="post-date">Brain Up</p>
+                    <p class="post-date">Brain Up - laryssa.muniz@brainupti.com.br</p>
                     <h2>Laryssa Muniz</h2>
                     <div class="entry-content">
                         <p>Possui graduação em Telemática, e especialização em Engenharia de Software ­na Estácio FIC. Atualmente é aluna de Mestrado em Ciências da Computação na UECE, sendo bolsista FIT/FUNCAP.</p>
@@ -334,7 +334,7 @@ body {
             <!-- /.span4 -->
             <article class="span4 post"> <a href="flisol2016/public/img/ben-rainir.jpg" rel="prettyPhoto"><img class="img-news" src="flisol2016/public/img/ben-rainir.jpg" alt=""></a>
                 <div class="inside">
-                    <p class="post-date">Brain Up</p>
+                    <p class="post-date">Brain Up - ben@brainupti.com.br</p>
                     <h2>Ben Rainir</h2>
                     <div class="entry-content">
                         <p>Cursou em Ciências da Computação pela UFC. Possui mais de 10 anos de experiência em desenvolvimento de soluções web/mobile ; Atualmente é empreendedor e Fundador da Brain UP - Empresa de especilizada em soluções web/mobile.</p> 
