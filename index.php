@@ -75,6 +75,7 @@ body {
             <li><a title="Paletrantes" href="#news">Palestrantes</a></li>
             <li><a title="Inscreva-se" href="#contact">Inscrição</a></li>
             <li><a title="Certificados"  href=" #certification">Certificados</a></li>
+            <li><a title="Incritos"  href="inscritos.php">Listar Inscritos</a></li>
           </ul>
         </nav>
       </div>
