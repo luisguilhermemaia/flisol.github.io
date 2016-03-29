@@ -111,6 +111,7 @@ body {
                 <div class="cform" id="theme-form">
                     <form id="form-cidade" action="" method="post" class="cform-form">
                         <select name="cidade" id="cidade" required >
+                            <option value="*">Todos</option>
                             <option value="acarau">Acarau</option>
                             <option value="cariri" >Cariri</option>
                             <option value="caninde">Caninde</option>
@@ -131,43 +132,42 @@ body {
                     </form>
                 </div>
 
-                <table class="table table-striped table-bordered">
-                <tr class="success">
-                    <td>Nome</td>
-                    <td>E-mail</td>
-                    <td>Endereço</td>
-                    <td>Cidade</td>
-                    <td>Link</td>
-                    <td>Resumo</td>
-                    <td>Instituição</td>
-                    <td>Semestre</td>
-                </tr>
+                <table id="table" class="table table-striped table-bordered">
+                  <tr class="success">
+                      <td>Nome</td>
+                      <td>E-mail</td>
+                      <td>Endereço</td>
+                      <td>Cidade</td>
+                      <td>Link</td>
+                      <td>Resumo</td>
+                      <td>Instituição</td>
+                      <td>Semestre</td>
+                  </tr>
 
-                <?php
-                foreach($inscritos as $inscrito): ?>
-                <tr>
-                    <td><?= $inscrito['nome'] ?></td>
-                    <td><?= $inscrito['email'] ?></td>
-                    <td><?= substr($inscrito['endereco'], 0, 40) ?></td>
-                    <td><?= $inscrito['cidade']?></td>
-                    <?php
-                    if ($inscrito['link'] != ''){ ?>
-                        <td><?= $inscrito['link']?></td>
-                    <?php }else{ ?>
-                        <td>-</td>
-                    <?php }?>
-                    <?php
-                    if ($inscrito['resumo'] != ''){ ?>
-                        <td><?= $inscrito['resumo']?></td>
-                    <?php }else{ ?>
-                        <td>-</td>
-                    <?php }?>
-                    <td><?= $inscrito['instituicao']?></td>
-                    <td><?= $inscrito['semestre']?></td>
+                  <?php
+                  foreach($inscritos as $inscrito): ?>
+                  <tr>
+                      <td><?= $inscrito['nome'] ?></td>
+                      <td><?= $inscrito['email'] ?></td>
+                      <td><?= substr($inscrito['endereco'], 0, 40) ?></td>
+                      <td><?= $inscrito['cidade']?></td>
+                      <?php
+                      if ($inscrito['link'] != ''){ ?>
+                          <td><?= $inscrito['link']?></td>
+                      <?php }else{ ?>
+                          <td>-</td>
+                      <?php }?>
+                      <?php
+                      if ($inscrito['resumo'] != ''){ ?>
+                          <td><?= $inscrito['resumo']?></td>
+                      <?php }else{ ?>
+                          <td>-</td>
+                      <?php }?>
+                      <td><?= $inscrito['instituicao']?></td>
+                      <td><?= $inscrito['semestre']?></td>
 
-                </tr>
-                <?php endforeach
-                ?>
+                  </tr>
+                <?php endforeach ?>
 
 
                 </table>
@@ -197,8 +197,6 @@ body {
 
   </div>
 </section>
-
-
 
 <div class="footer-wrapper">
   <div class="container">
@@ -233,20 +231,19 @@ body {
 
     $(document).ready(function() {
 
-        $( "#form-cidade" ).submit(function(e) {
+        $("#form-cidade").submit(function(e) {
             e.preventDefault();
-            console.log('teste');
             var values = $(this).serialize();
 
             $.ajax({
-                url: "flisol2016/controller/FlisolController.php",
+                url: "flisol2016/controller/InscritosController.php",
                 type: "post",
                 data: values,
                 success: function (response) {
+                  console.log(response);
                     $('#myModal-msg').html(response);
                     $('#myModal').modal();
-                    $('#form-inscrito')[0].reset();
-                    grecaptcha.reset();
+                    $('#form-cidade')[0].reset();   
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.log(textStatus, errorThrown);
@@ -254,17 +251,7 @@ body {
             });
 
         });
-
-
-
-
-
-
     });
-
-
-
-
 
 </script>
 </body>

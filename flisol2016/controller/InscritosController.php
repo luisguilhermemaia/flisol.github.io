@@ -1,7 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Guilherme
- * Date: 29/03/16
- * Time: 18:04
- */
+error_reporting(0);
+include_once('../model/FlisolModel.php');
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
+
+$flisol = new FlisolModel();
+
+if (isset($_POST)) {
+
+    $flisol->setCidade($_POST['cidade']);
+    
+    print $flisol->listarCidades();
+}
+
+
