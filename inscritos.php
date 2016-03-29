@@ -1,4 +1,13 @@
+<?php include_once('flisol2016/model/FlisolModel.php');
 
+$model = new FlisolModel();
+
+$inscritos = $model->listarInscritos();
+//echo '<pre>';
+//print_r($inscritos);
+//exit;
+
+?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -99,22 +108,70 @@ body {
          <fieldset>
           <div class="span12">
             <div class="inside">
+                <div class="cform" id="theme-form">
+                    <form id="form-cidade" action="" method="post" class="cform-form">
+                        <select name="cidade" id="cidade" required >
+                            <option value="acarau">Acarau</option>
+                            <option value="cariri" >Cariri</option>
+                            <option value="caninde">Caninde</option>
+                            <option value="crateus">Crateus</option>
+                            <option value="fortaleza" selected="selected">Fortaleza</option>
+                            <option value="juazeiro-do-norte">Juazeiro do Norte</option>
+                            <option value="quixada">Quixada</option>
+                            <option value="redencao">Redenção</option>
+                            <option value="russas">Russas</option>
+                            <option value="sao-goncalo-do-amarante">São Gonçalo do Amarante</option>
+                            <option value="reriutaba">Reriutaba</option>
+                        </select>
+                        <div class="row">
+                            <div class="span6">
+                                <input type="submit" id="enviar" value="enviar" class="cform-submit pull-left">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
                 <table class="table table-striped table-bordered">
-                    <tr>
-                        <td class="active">...</td>
-                        <td class="success">...</td>
-                        <td class="warning">...</td>
-                        <td class="danger">...</td>
-                        <td class="info">...</td>
-                    </tr>
-                    <tr>
-                        <td class="active">...</td>
-                        <td class="success">...</td>
-                        <td class="warning">...</td>
-                        <td class="danger">...</td>
-                        <td class="info">...</td>
-                    </tr>
+                <tr class="success">
+                    <td>Nome</td>
+                    <td>E-mail</td>
+                    <td>Endereço</td>
+                    <td>Cidade</td>
+                    <td>Link</td>
+                    <td>Resumo</td>
+                    <td>Instituição</td>
+                    <td>Semestre</td>
+                </tr>
+
+                <?php
+                foreach($inscritos as $inscrito): ?>
+                <tr>
+                    <td><?= $inscrito['nome'] ?></td>
+                    <td><?= $inscrito['email'] ?></td>
+                    <td><?= substr($inscrito['endereco'], 0, 40) ?></td>
+                    <td><?= $inscrito['cidade']?></td>
+                    <?php
+                    if ($inscrito['link'] != ''){ ?>
+                        <td><?= $inscrito['link']?></td>
+                    <?php }else{ ?>
+                        <td>-</td>
+                    <?php }?>
+                    <?php
+                    if ($inscrito['resumo'] != ''){ ?>
+                        <td><?= $inscrito['resumo']?></td>
+                    <?php }else{ ?>
+                        <td>-</td>
+                    <?php }?>
+                    <td><?= $inscrito['instituicao']?></td>
+                    <td><?= $inscrito['semestre']?></td>
+
+                </tr>
+                <?php endforeach
+                ?>
+
+
                 </table>
+
             </div>
             <!-- /.inside -->
           </div>
@@ -124,9 +181,6 @@ body {
   </div>
   <!-- /.container -->
 </section>
-
-
-
 
 
 <section id="social" class="single-page scrollblock">
@@ -176,6 +230,39 @@ body {
 
 <!--ANALYTICS CODE-->
 <script type="text/javascript">
+
+    $(document).ready(function() {
+
+        $( "#form-cidade" ).submit(function(e) {
+            e.preventDefault();
+            console.log('teste');
+            var values = $(this).serialize();
+
+            $.ajax({
+                url: "flisol2016/controller/FlisolController.php",
+                type: "post",
+                data: values,
+                success: function (response) {
+                    $('#myModal-msg').html(response);
+                    $('#myModal').modal();
+                    $('#form-inscrito')[0].reset();
+                    grecaptcha.reset();
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus, errorThrown);
+                }
+            });
+
+        });
+
+
+
+
+
+
+    });
+
+
 
 
 
