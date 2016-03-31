@@ -75,6 +75,7 @@ body {
             <li><a title="Paletrantes" href="#news">Palestrantes</a></li>
             <li><a title="Inscreva-se" href="#contact">Inscrição</a></li>
             <li><a title="Certificados"  href=" #certification">Certificados</a></li>
+            <li><a title="Incritos"  href="inscritos.php">Listar Inscritos</a></li>
           </ul>
         </nav>
       </div>
@@ -199,6 +200,10 @@ body {
     <div class="span2">
         <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-10.jpg" alt=""> </div>
         <h3>Sobral</h3>
+    </div>
+    <div class="span2">
+        <div class="teamalign"> <img class="team-thumb img-circle" src="flisol2016/public/img/portrait-10.jpg" alt=""> </div>
+        <h3>Reriutaba</h3>
     </div>
     <!-- ./span2 -->
 
@@ -384,7 +389,7 @@ body {
                                     <option value="redencao">Redenção</option>
                                     <option value="russas">Russas</option>
                                     <option value="sao-goncalo-do-amarante">São Gonçalo do Amarante</option>
-
+                                    <option value="reriutaba">Reriutaba</option>
                                 </select>
                             </div>
                         
