@@ -1150,8 +1150,7 @@ footer p {
 }
 
 .class-radio .span3{
-      color: #555555;
-    font-family: 'Open Sans', sans serif !important;
+    color: #555555;
     border: 0;
     text-align: left;
     vertical-align: middle;
@@ -1181,7 +1180,7 @@ footer p {
 }
 
 .g-recaptcha {
-	padding: 20px;
+	padding: 20px 0px;
 }
 
 .palestrante-itens{
@@ -1228,4 +1227,12 @@ input[type=radio]{
 		background-color: #FDD539;
 		color:#fff;
 	}
+
+@media (max-width: 767px){}
+	body {
+	    padding-right: 0px !important;
+	    padding-left: 0px !important;
+	}
+
+}
 
