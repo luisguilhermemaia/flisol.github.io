@@ -9,9 +9,9 @@ $erro_msg = '';
 
 if (isset($_POST["login"])) {
 	$model = new FlisolModel();
-	$usuario = $_POST["login"];
-	$senha = $_POST["senha"];
-	if ($model->login($usuario, $senha)){
+	$user = $_POST["login"];
+	$pass = $_POST["senha"];
+	if ($model->login($user, $pass)){
 		$_SESSION['usuario'] = 'admin@flisolce.org';
 		header('Location: inscritos.php');
 		exit;
