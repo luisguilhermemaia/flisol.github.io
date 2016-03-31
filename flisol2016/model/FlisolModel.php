@@ -182,5 +182,36 @@ class FlisolModel{
 		}
 	}
 
+    public function listarInscritos(){
+
+        $query ='SELECT `nome`, `email`, `endereco`, `telefone`, `cidade`, `link`, `resumo`, `instituicao`, `semestre` FROM `inscritos`';
+
+        $res = $this->db->prepare($query);
+        $res->execute();
+
+        $result = $res->fetchAll();
+
+        return $result;
+    }
+    public function listarCidades(){
+
+        $params = array(':cidade' => $this->getCidade());
+     
+
+        $query = 'SELECT nome, email, endereco, telefone, cidade, link, resumo, instituicao, semestre 
+                  FROM inscritos 
+                  WHERE cidade = :cidade';
+
+
+        $res = $this->db->prepare($query);
+        $res->execute($params);
+
+        $result = $res->fetchAll();
+
+        print_r($result);exit;
+        return $result;
+
+    }
+
 }
 ?>	
