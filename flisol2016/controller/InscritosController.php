@@ -1,6 +1,7 @@
 <?php
-//error_reporting(0);
+error_reporting(0);
 session_start();
+
 include_once('flisol2016/model/FlisolModel.php');
 include_once('flisol2016/controller/SegurancaController.php');
 

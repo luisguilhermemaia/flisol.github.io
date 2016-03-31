@@ -61,12 +61,6 @@ body {
         <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
         <nav class="pull-right nav-collapse collapse">
           <ul id="menu-main" class="nav">
-              <!-- <li><a title="Portifolio" href="#portfolio">Flisol </a></li>
-              <li><a title="Cidade" href="#team">Cidades</a></li>
-              <li><a title="Programação" href="#services">Programação</a></li>
-              <li><a title="Paletrantes" href="#news">Palestrantes</a></li>
-              <li><a title="Inscreva-se" href="#contact">Inscrição</a></li>
-              <li><a title="Certificados"  href=" #certification">Certificados</a></li> -->
               <li><a title="Incritos"  href="index.php">Voltar para o site</a></li>
             </ul>
           </nav>
@@ -91,19 +85,19 @@ body {
     		<div class="cform" id="theme-form">
 	        	<form action="" method="POST">
 		        	<div class="row">
-	    				<div class="span4 offset4">
-				        	<span>
-								<input type="text" name="login" placeholder="Login" class="cform-text" size="40"/>
-								<input type="text" name="senha" placeholder="Senha" class="cform-text" size="40"/>
-								<input type="submit" name="entrar" value="entrar"/>
-							</span>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
+  	    				<div class="span4 offset4">
+  				        	<span>
+      								<input type="text" name="login" placeholder="Login" class="cform-text" size="40"/>
+      								<input type="text" name="senha" placeholder="Senha" class="cform-text" size="40"/>
+      								<input type="submit" name="entrar" value="entrar"/>
+  							   </span>
+  						  </div>
+					     </div>
+				    </form>
+           <?php print $erro_msg; ?>
+			   </div>
+		  </div>
     </div>
-
   </div>
   <!-- /.container -->
 </section>

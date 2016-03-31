@@ -1,9 +1,11 @@
 <?php
+error_reporting(0);
 session_start();
-//error_reporting(0);
 
 include_once('flisol2016/model/FlisolModel.php');
+
 $_SESSION['usuario'] = NULL;
+$erro_msg = '';
 
 if (isset($_POST["login"])) {
 	$model = new FlisolModel();
@@ -14,6 +16,6 @@ if (isset($_POST["login"])) {
 		header('Location: inscritos.php');
 		exit;
 	}else{
-		print "<span style='color:red'> Usuário ou Senha invalidos ! Tente novamente!";
+		$erro_msg =  "<span style='color:red'> Usuário ou Senha invalidos ! Tente novamente!";
 	}
 }
