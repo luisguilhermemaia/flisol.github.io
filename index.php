@@ -391,6 +391,7 @@ body {
                                      <option value="reriutaba">Reriutaba</option>
                                     <option value="russas">Russas</option>
                                     <option value="sao-goncalo-do-amarante">São Gonçalo do Amarante</option>
+                                    <option value="sobral">Sobral</option>
                                    
                                 </select>
                             </div>
