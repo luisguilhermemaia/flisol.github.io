@@ -13,7 +13,7 @@ class FlisolModel{
 	private $semestre;
 
 	public function __construct(){
-		$pdo = new PDO('mysql:host=localhost;dbname=flisol2016', "root", "root");
+		$pdo = new PDO('mysql:host=localhost;dbname=flisol2016', "root", "");
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$this->db = $pdo ;
 	}
@@ -182,16 +182,28 @@ class FlisolModel{
 		}
 	}
 
-    public function listarInscritos(){
+    public function listarInscritos($cidade = NULL){
 
-        $query ='SELECT `nome`, `email`, `endereco`, `telefone`, `cidade`, `link`, `resumo`, `instituicao`, `semestre` FROM `inscritos`';
-
-        $res = $this->db->prepare($query);
-        $res->execute();
-
-        $result = $res->fetchAll();
+        if ($cidade == null || $cidade = '*') {
+            $query ='SELECT nome, email, endereco, telefone, cidade, link, resumo, instituicao, semestre 
+                     FROM inscritos
+                     ORDER BY cidade, nome';
+            $res = $this->db->prepare($query);
+            $res->execute();
+            $result = $res->fetchAll();
+        } else {
+            $params = array( ':cidade' => $cidade);
+            $query ='SELECT nome, email, endereco, telefone, cidade, link, resumo, instituicao, semestre 
+                     FROM inscritos
+                     WHERE cidade = :cidade
+                     ORDER BY cidade, nome';
+            $res = $this->db->prepare($query);
+            $res->execute($params);
+            $result = $res->fetchAll();
+        }
 
         return $result;
+        
     }
     public function listarCidades(){
 
@@ -211,6 +223,11 @@ class FlisolModel{
         print_r($result);exit;
         return $result;
 
+    }
+
+    public function login($usuario, $senha){
+
+        return ($usuario == 'admin@flisolce.org' && $senha == 'flisol@2016@admin');
     }
 
 }

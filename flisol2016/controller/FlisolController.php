@@ -2,8 +2,8 @@
 error_reporting(0);
 require_once "../recaptchalib.php";
 include_once('../model/FlisolModel.php');
-//error_reporting(E_ALL);
-//ini_set('display_errors', 0);
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
 
 // your secret key
 $secret = "6LcL0xoTAAAAAITVSBiPE6M0ei16X3vbxaVJg2vn";

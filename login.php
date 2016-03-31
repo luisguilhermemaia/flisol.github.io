@@ -1,4 +1,5 @@
-<?php  include_once('flisol2016/controller/InscritosController.php'); ?>
+<?php  include_once('flisol2016/controller/LoginController.php'); ?>
+
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
@@ -85,76 +86,22 @@ body {
 <section id="portfolio" class="single-page scrollblock">
   <div class="container">
     <div class="row">
-
-         <fieldset>
-          <div class="span12">
-            <div class="inside">
-                <div class="cform" id="theme-form">
-                    <form id="form-cidade" action="" method="get" class="cform-form">
-                        <select name="cidade" id="cidade" required >
-                            <option value="*">Todos</option>
-                            <option value="acarau">Acarau</option>
-                            <option value="cariri" >Cariri</option>
-                            <option value="caninde">Caninde</option>
-                            <option value="crateus">Crateus</option>
-                            <option value="fortaleza" selected="selected">Fortaleza</option>
-                            <option value="juazeiro-do-norte">Juazeiro do Norte</option>
-                            <option value="quixada">Quixada</option>
-                            <option value="redencao">Redenção</option>
-                            <option value="russas">Russas</option>
-                            <option value="sao-goncalo-do-amarante">São Gonçalo do Amarante</option>
-                            <option value="reriutaba">Reriutaba</option>
-                        </select>
-                       
-                        <input type="submit" id="pesquisar" value="pesquisar" class="cform-submit pull-right">
-                           
-                    </form>
-                </div>
-
-                <table id="table" class="table table-striped table-bordered">
-                  <tr class="success">
-                      <td>Cidade</td>
-                      <td>Nome</td>
-                      <td>E-mail</td>
-                      <td>Endereço</td>
-                      <td>Link</td>
-                      <td>Resumo</td>
-                      <td>Instituição</td>
-                      <td>Semestre</td>
-                  </tr>
-
-                  <?php
-                  foreach($inscritos as $inscrito): ?>
-                  <tr>
-                      <td><?= $inscrito['cidade']?></td>
-                      <td><?= $inscrito['nome'] ?></td>
-                      <td><?= $inscrito['email'] ?></td>
-                      <td><?= substr($inscrito['endereco'], 0, 40) ?></td>
-                      <?php
-                      if ($inscrito['link'] != ''){ ?>
-                          <td><?= $inscrito['link']?></td>
-                      <?php }else{ ?>
-                          <td>-</td>
-                      <?php }?>
-                      <?php
-                      if ($inscrito['resumo'] != ''){ ?>
-                          <td><?= $inscrito['resumo']?></td>
-                      <?php }else{ ?>
-                          <td>-</td>
-                      <?php }?>
-                      <td><?= $inscrito['instituicao']?></td>
-                      <td><?= $inscrito['semestre']?></td>
-
-                  </tr>
-                <?php endforeach ?>
-
-
-                </table>
-
-            </div>
-            <!-- /.inside -->
-          </div>
-         </fieldset>
+    	<div class="span12">
+    		<h1> Flisol 2016 - Administração</h1>
+    		<div class="cform" id="theme-form">
+	        	<form action="" method="POST">
+		        	<div class="row">
+	    				<div class="span4 offset4">
+				        	<span>
+								<input type="text" name="login" placeholder="Login" class="cform-text" size="40"/>
+								<input type="text" name="senha" placeholder="Senha" class="cform-text" size="40"/>
+								<input type="submit" name="entrar" value="entrar"/>
+							</span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
     </div>
 
   </div>
