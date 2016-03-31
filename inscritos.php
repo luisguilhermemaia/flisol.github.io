@@ -84,11 +84,8 @@ body {
 <!--******************** Portfolio Section ********************-->
 <section id="portfolio" class="single-page scrollblock">
   <div class="container">
-    <div class="row">
-
-         <fieldset>
-          <div class="span12">
-            <div class="inside">
+      <div class="row">
+          <div class="col-md-12">
                 <div class="cform" id="theme-form">
                     <form id="form-cidade" action="" method="get" class="cform-form">
                         <select name="cidade" id="cidade" required >
@@ -110,9 +107,10 @@ body {
                            
                     </form>
                 </div>
-
-                <table id="table" class="table table-striped table-bordered">
-                  <tr class="success">
+                <div class="table-responsive">
+                <table id="table" class="table  table-striped table-bordered" style="font-size: 12px;">
+                  <thead>
+                    <tr>
                       <td>Cidade</td>
                       <td>Nome</td>
                       <td>E-mail</td>
@@ -122,41 +120,28 @@ body {
                       <td>Instituição</td>
                       <td>Semestre</td>
                   </tr>
+                  </thead>
+                  
+                  <tbody>
 
-                  <?php
-                  foreach($inscritos as $inscrito): ?>
-                  <tr>
-                      <td><?= $inscrito['cidade']?></td>
-                      <td><?= $inscrito['nome'] ?></td>
-                      <td><?= $inscrito['email'] ?></td>
-                      <td><?= substr($inscrito['endereco'], 0, 40) ?></td>
-                      <?php
-                      if ($inscrito['link'] != ''){ ?>
-                          <td><?= $inscrito['link']?></td>
-                      <?php }else{ ?>
-                          <td>-</td>
-                      <?php }?>
-                      <?php
-                      if ($inscrito['resumo'] != ''){ ?>
-                          <td><?= $inscrito['resumo']?></td>
-                      <?php }else{ ?>
-                          <td>-</td>
-                      <?php }?>
-                      <td><?= $inscrito['instituicao']?></td>
-                      <td><?= $inscrito['semestre']?></td>
+                  <?php foreach($inscritos as $inscrito): ?>
+                    <tr>
+                        <td><?= trim($inscrito['cidade']);?></td>
+                        <td><?= trim($inscrito['nome']); ?></td>
+                        <td><?= trim($inscrito['email']); ?></td>
+                        <td><?= trim($inscrito['endereco']); ?></td>
+                        <td><?= trim($inscrito['link']); ?></td>
+                        <td><?= trim($inscrito['resumo']); ?></td>
+                        <td><?= trim($inscrito['instituicao']); ?></td>
+                        <td><?= trim($inscrito['semestre']); ?></td>
+                    </tr>
+                  <?php endforeach ?>
 
-                  </tr>
-                <?php endforeach ?>
-
-
+                </tbody>
                 </table>
-
-            </div>
-            <!-- /.inside -->
+                </div>
           </div>
-         </fieldset>
-    </div>
-
+        </div>
   </div>
   <!-- /.container -->
 </section>

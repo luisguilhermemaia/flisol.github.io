@@ -1228,11 +1228,10 @@ input[type=radio]{
 		color:#fff;
 	}
 
-@media (max-width: 767px){}
-	body {
-	    padding-right: 0px !important;
-	    padding-left: 0px !important;
+	@media (max-width: 767px){}
+		body {
+		    padding-right: 0px !important;
+		    padding-left: 0px !important;
+		}
+
 	}
-
-}
-
