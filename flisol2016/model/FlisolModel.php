@@ -184,7 +184,7 @@ class FlisolModel{
 
     public function listarInscritos($cidade = NULL){
 
-        if ($cidade == null || $cidade = '*') {
+        if ($cidade == null || $cidade == '*') {
             $query ='SELECT nome, email, endereco, telefone, cidade, link, resumo, instituicao, semestre 
                      FROM inscritos
                      ORDER BY cidade, nome';

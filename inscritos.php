@@ -92,12 +92,12 @@ body {
                 <div class="cform" id="theme-form">
                     <form id="form-cidade" action="" method="get" class="cform-form">
                         <select name="cidade" id="cidade" required >
-                            <option value="*">Todos</option>
+                            <option selected="selected" value="*">Todos</option>
                             <option value="acarau">Acarau</option>
                             <option value="cariri" >Cariri</option>
                             <option value="caninde">Caninde</option>
                             <option value="crateus">Crateus</option>
-                            <option value="fortaleza" selected="selected">Fortaleza</option>
+                            <option value="fortaleza" >Fortaleza</option>
                             <option value="juazeiro-do-norte">Juazeiro do Norte</option>
                             <option value="quixada">Quixada</option>
                             <option value="redencao">Redenção</option>
