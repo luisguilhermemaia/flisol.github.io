@@ -94,13 +94,14 @@ body {
                             <option value="cariri" >Cariri</option>
                             <option value="caninde">Caninde</option>
                             <option value="crateus">Crateus</option>
-                            <option value="fortaleza" >Fortaleza</option>
+                            <option value="fortaleza">Fortaleza</option>
                             <option value="juazeiro-do-norte">Juazeiro do Norte</option>
                             <option value="quixada">Quixada</option>
                             <option value="redencao">Redenção</option>
+                            <option value="reriutaba">Reriutaba</option>
                             <option value="russas">Russas</option>
                             <option value="sao-goncalo-do-amarante">São Gonçalo do Amarante</option>
-                            <option value="reriutaba">Reriutaba</option>
+                            <option value="sobral">Sobral</option>
                         </select>
                        
                         <input type="submit" id="pesquisar" value="pesquisar" class="cform-submit pull-right">
