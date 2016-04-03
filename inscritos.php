@@ -89,25 +89,28 @@ body {
                 <div class="cform" id="theme-form">
                     <form id="form-cidade" action="" method="get" class="cform-form">
                         <select name="cidade" id="cidade" required >
-                            <option selected="selected" value="*">Todos</option>
-                            <option value="acarau">Acarau</option>
-                            <option value="cariri" >Cariri</option>
-                            <option value="caninde">Caninde</option>
-                            <option value="crateus">Crateus</option>
-                            <option value="fortaleza">Fortaleza</option>
-                            <option value="juazeiro-do-norte">Juazeiro do Norte</option>
-                            <option value="quixada">Quixada</option>
-                            <option value="redencao">Redenção</option>
-                            <option value="reriutaba">Reriutaba</option>
-                            <option value="russas">Russas</option>
-                            <option value="sao-goncalo-do-amarante">São Gonçalo do Amarante</option>
-                            <option value="sobral">Sobral</option>
+                            <option <?php ($_GET[cidade]=='*' || $_GET[cidade]=='')? print 'selected="selected"':''; ?> value="*">Todos</option>
+                            <option value="acarau" <?php ($_GET[cidade]=='acarau')? print 'selected="selected"':''; ?> > Acarau</option>
+                            <option value="cariri" <?php ($_GET[cidade]=='cariri')? print 'selected="selected"':''; ?> >Cariri</option>
+                            <option value="caninde" <?php ($_GET[cidade]=='caninde')? print 'selected="selected"':''; ?> >Caninde</option>
+                            <option value="crateus" <?php ($_GET[cidade]=='crateus')? print 'selected="selected"':''; ?> >Crateus</option>
+                            <option value="fortaleza" <?php ($_GET[cidade]=='fortaleza')? print 'selected="selected"':''; ?> >Fortaleza</option>
+                            <option value="juazeiro-do-norte" <?php ($_GET[cidade]=='juazeiro-do-norte')? print 'selected="selected"':''; ?> >Juazeiro do Norte</option>
+                            <option value="quixada" <?php ($_GET[cidade]=='quixada')? print 'selected="selected"':''; ?> >Quixada</option>
+                            <option value="redencao"<?php ($_GET[cidade]=='redencao')? print 'selected="selected"':''; ?> >Redenção</option>
+                            <option value="reriutaba" <?php ($_GET[cidade]=='reriutaba')? print 'selected="selected"':''; ?> >Reriutaba</option>
+                            <option value="russas" <?php ($_GET[cidade]=='russas')? print 'selected="selected"':''; ?> >Russas</option>
+                            <option value="sao-goncalo-do-amarante" <?php ($_GET[cidade]=='sao-goncalo-do-amarante')? print 'selected="selected"':''; ?> >São Gonçalo do Amarante</option>
+                            <option value="sobral" <?php ($_GET[cidade]=='sobral')? print 'selected="selected"':''; ?> >Sobral</option>
                         </select>
                        
                         <input type="submit" id="pesquisar" value="pesquisar" class="cform-submit pull-right">
                            
                     </form>
                 </div>
+<br/>
+<div style="padding: 10px 0px;"><?php print 'Total de Inscritos: ' . count($inscritos); ?></div>
+<br/>
                 <div class="table-responsive">
                 <table id="table" class="table  table-striped table-bordered" style="font-size: 12px;">
                   <thead>
