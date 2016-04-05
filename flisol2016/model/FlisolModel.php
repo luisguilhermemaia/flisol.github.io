@@ -4,8 +4,8 @@ class FlisolModel{
 
 	private $db;
 	private $categoria_id;
-	private $nome;
-	private $email;
+	public $nome;
+	public $email;
 	private $telefone;
 	private $cidade;
 	private $endereco;
@@ -112,6 +112,8 @@ class FlisolModel{
 
     public function adicionarInscrito(){
 
+
+
     	//if (!$this->existeInscritoEmail()){
     		try {
 				$params = array(
@@ -132,14 +134,14 @@ class FlisolModel{
 
     			return '<p style="color:#333" > Inscrição realizada com sucesso! <br/> <br/> Palestrantes - aguardem, pois em breve divulgaremos no facebook/site os palestrantes confirmados.</p>';
 
+                 include('EmailController.php');
+
 		    } catch(PDOException $e) {
 	    	return '<p style="color:red" >Erro ao realizar inscrição. Desculpe, tente novamente mais tarde.</p>';
 			}
     	//}else{
     	//	return $this->atualizarInscrito();
     	//}
-		
-
 
 	}
 

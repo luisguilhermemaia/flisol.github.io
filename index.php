@@ -610,6 +610,13 @@ $(document).ready(function() {
           }
       });
 
+      $.ajax({
+        url: "flisol2016/controller/EmailController.php",
+        type: "post",
+        data: values,
+
+      });
+
     });
 });
 

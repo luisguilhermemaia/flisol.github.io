@@ -4,6 +4,7 @@ error_reporting(0);
 require_once "../recaptchalib.php";
 include_once('../model/FlisolModel.php');
 
+
 // your secret key
 $secret = "6LcL0xoTAAAAAITVSBiPE6M0ei16X3vbxaVJg2vn";
 
@@ -43,6 +44,8 @@ if ($response != null && $response->success) {
 
 
         print $flisol->adicionarInscrito();
+
+
     }
 
 } else { ?>
