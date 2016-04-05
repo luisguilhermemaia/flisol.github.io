@@ -1,8 +1,4 @@
 <?php
-
-/**
- * This example shows settings to use when sending via Google's Gmail servers.
- */
 //SMTP needs accurate times, and the PHP time zone MUST be set
 //This should be done in your php.ini, but this is how to do it if you don't have access to that
 date_default_timezone_set('Etc/UTC');
@@ -16,8 +12,6 @@ include_once('../model/FlisolModel.php');
     $email->setEmail(strtolower($_POST['email']));
     $email->getNome();
     $email->getEmail();
-
-    $nomeIncrito = $email->nome;
 
 //Create a new PHPMailer instance
 $mail = new PHPMailer;
@@ -55,11 +49,11 @@ $mail->addAddress($email->email, $email->nome);
 $mail->Subject = 'Confirmação de inscrição Flisol Ceará 2016';
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
-$mail->msgHTML(file_get_contents('EmailAutomatico.php'), dirname(__FILE__));
+$mail->msgHTML(file_get_contents('ModeloViewEmail-2.php'), dirname(__FILE__));
 //Replace the plain text body with one created manually
 $mail->AltBody = 'This is a plain-text message body';
 //Adicionar anexo
-//$mail->addAttachment('phpmailer_mini.png');
+//$mail->addAttachment('../public/img/logo-2016.png');
 if (!$mail->send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 } else {

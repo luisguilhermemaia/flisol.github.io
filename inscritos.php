@@ -1,4 +1,4 @@
-<?php  include_once('flisol2016/controller/InscritosController.php'); ?>
+<?php include_once('flisol2016/controller/InscritosController.php'); ?>
 <!DOCTYPE HTML>
 <html lang="pt-br">
 <head>
